@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corte de Manga | Gastrobar en el Eixample, Barcelona</title>
+  <meta name="description" content="Gastrobar en el Eixample de Barcelona. Cocina de mercado, tapas artesanales y cócteles de autor. Abierto de lunes a domingo, de 08:00 a 01:00. Comte d'Urgell 108, Barcelona.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cortedemanga.es/">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="es" href="https://cortedemanga.es/">
+  <link rel="alternate" hreflang="en" href="https://cortedemanga.es/">
+  <link rel="alternate" hreflang="ca" href="https://cortedemanga.es/">
+  <link rel="alternate" hreflang="x-default" href="https://cortedemanga.es/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="Corte de Manga | Gastrobar en el Eixample, Barcelona">
+  <meta property="og:description" content="Gastrobar en el Eixample de Barcelona. Cocina de mercado, tapas artesanales y cócteles de autor. Abierto todos los días de 08:00 a 01:00.">
+  <meta property="og:url" content="https://cortedemanga.es/">
+  <meta property="og:site_name" content="Corte de Manga">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:locale:alternate" content="ca_ES">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Corte de Manga | Gastrobar Barcelona">
+  <meta name="twitter:description" content="Gastrobar en el Eixample. Cocina de mercado, tapas y cócteles. Abierto de 08:00 a 01:00.">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "@id": "https://cortedemanga.es/#restaurant",
+      "name": "Corte de Manga",
+      "description": "Gastrobar en el Eixample de Barcelona. Cocina de mercado, tapas artesanales y cócteles de autor. Abierto de lunes a domingo de 08:00 a 01:00.",
+      "url": "https://cortedemanga.es",
+      "telephone": "+34623216562",
+      "email": "info@cortedemanga.com",
+      "priceRange": "€€",
+      "servesCuisine": ["Tapas", "Cocina de Mercado", "Española", "Mediterránea"],
+      "hasMenu": "https://cortedemanga.es/#carta",
+      "acceptsReservations": "True",
+      "foundingDate": "2019",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Carrer del Comte d'Urgell, 108",
+        "addressLocality": "Barcelona",
+        "addressRegion": "Catalunya",
+        "postalCode": "08011",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.38465,
+        "longitude": 2.15385
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "08:00",
+        "closes": "01:00"
+      }],
+      "inLanguage": ["es", "en", "ca"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+34623216562",
+        "contactType": "reservations",
+        "availableLanguage": ["Spanish", "English", "Catalan"]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://cortedemanga.es/#website",
+      "name": "Corte de Manga",
+      "url": "https://cortedemanga.es",
+      "inLanguage": ["es", "en", "ca"],
+      "publisher": {
+        "@id": "https://cortedemanga.es/#restaurant"
+      }
+    }
+  ]
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Syne for huge brutalist headings, Inter for clinical body text -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="carta.js"></script>
+  <script src="traducciones.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'display': ['Syne', 'sans-serif'],
+            'body': ['Inter', 'sans-serif'],
+          },
+          colors: {
+            bgDark: '#050505',
+            fgLight: '#EBEBEB',
+            accent: '#B12A2A',
+            grid: '#333333'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --grid-color: rgba(235, 235, 235, 0.15);
+    }
+    body {
+      background-color: #050505;
+      color: #EBEBEB;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+      /* Subtle noise texture overlay */
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+    
+    /* Architectural grid layout */
+    .blueprint-grid {
+      display: grid;
+      grid-template-columns: 80px 1fr 1fr;
+      min-height: 100vh;
+      border-right: 1px solid var(--grid-color);
+      width: 100%;
+      max-width: 100vw;
+      /* overflow-x: hidden; removed so sticky top bar works */
+    }
+
+    @media (max-width: 768px) {
+      .blueprint-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px auto auto;
+      }
+    }
+
+    .border-b-grid { border-bottom: 1px solid var(--grid-color); }
+    .border-r-grid { border-right: 1px solid var(--grid-color); }
+    .border-l-grid { border-left: 1px solid var(--grid-color); }
+    .border-t-grid { border-top: 1px solid var(--grid-color); }
+
+    /* Vertical text */
+    .vertical-text {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+    }
+
+    /* Oversized typography */
+    .text-massive {
+      font-size: clamp(2.8rem, 11vw, 15rem);
+      line-height: 0.85;
+      letter-spacing: -0.04em;
+    }
+
+    /* Marquee */
+    .marquee {
+      white-space: nowrap;
+      overflow: hidden;
+      box-sizing: border-box;
+      border-top: 1px solid var(--grid-color);
+      border-bottom: 1px solid var(--grid-color);
+      padding: 1.25rem 0;
+      background: #050505;
+      width: 100%;
+      max-width: 100vw;
+    }
+    .marquee span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 25s linear infinite;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 2rem;
+      color: #EBEBEB;
+    }
+    @keyframes marquee {
+      0%   { transform: translate(0, 0); }
+      100% { transform: translate(-100%, 0); }
+    }
+
+    /* Sharp hover animations */
+    .btn-sharp {
+      position: relative;
+      overflow: hidden;
+      transition: color 0.4s cubic-bezier(0.83, 0, 0.17, 1);
+      z-index: 1;
+    }
+    .btn-sharp::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: #EBEBEB;
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.4s cubic-bezier(0.83, 0, 0.17, 1);
+      z-index: -1;
+    }
+    .btn-sharp:hover {
+      color: #050505;
+    }
+    .btn-sharp:hover::before {
+      transform: scaleY(1);
+    }
+
+    .image-mono {
+      filter: grayscale(100%) contrast(1.2);
+      transition: filter 0.5s ease, transform 0.7s cubic-bezier(0.83, 0, 0.17, 1);
+    }
+    .group:hover .image-mono {
+      filter: grayscale(0%) contrast(1.1);
+      transform: scale(1.05);
+    }
+    
+    /* Smooth reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    ::-webkit-scrollbar { width: 0px; }
+    
+    /* Custom Cursor */
+    @media (pointer: fine) {
+      body { cursor: none; }
+      a, button, .cursor-pointer, .menu-item { cursor: none; }
+    }
+    .custom-cursor {
+      position: fixed;
+      top: 0; left: 0;
+      width: 24px; height: 24px;
+      border: 1px solid #EBEBEB;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: width 0.3s cubic-bezier(0.83, 0, 0.17, 1), height 0.3s cubic-bezier(0.83, 0, 0.17, 1), background-color 0.3s;
+      z-index: 9999;
+      mix-blend-mode: difference;
+      display: none;
+    }
+    @media (pointer: fine) {
+      .custom-cursor { display: block; }
+    }
+    .custom-cursor.hover {
+      width: 70px; height: 70px;
+      background-color: #EBEBEB;
+    }
+    
+    /* Mobile Menu Overlay */
+    .mobile-menu-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: #050505;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      transform: translateY(-100%);
+      transition: transform 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+    }
+    .mobile-menu-overlay.open {
+      transform: translateY(0);
+    }
+    .mobile-menu-link {
+      font-size: clamp(3rem, 12vw, 6rem);
+      text-transform: uppercase;
+      font-weight: 800;
+      font-family: 'Syne', sans-serif;
+      padding: 2rem;
+      border-bottom: 1px solid var(--grid-color);
+      transition: color 0.3s, padding-left 0.3s;
+      text-decoration: none;
+      color: #EBEBEB;
+    }
+    .mobile-menu-link:hover, .mobile-menu-link:active { 
+      color: #B12A2A; 
+      padding-left: 2.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="custom-cursor" id="customCursor"></div>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay" id="mobileMenu">
+  <div class="flex justify-between items-center p-6 border-b border-[#333333]">
+    <div class="font-display font-bold text-xl">C.M.</div>
+    <button id="closeMenuBtn" class="font-body text-xs uppercase tracking-widest cursor-pointer hover:text-accent transition-colors">Cerrar [X]</button>
+  </div>
+  <nav class="flex flex-col flex-grow">
+    <a href="#carta" class="mobile-menu-link close-on-click" data-i18n="nav_carta">Carta</a>
+    <a href="#experiencia" class="mobile-menu-link close-on-click" data-i18n="nav_concepto">Concepto</a>
+    <button onclick="openReservationModal()" class="mobile-menu-link text-left" data-i18n="nav_reservar">Reservar</button>
+  </nav>
+</div>
+
+<!-- Reservation Modal -->
+<div id="reservaModal" class="fixed inset-0 bg-[#050505] z-[200] flex flex-col transform translate-y-full transition-transform duration-700 cubic-bezier(0.83, 0, 0.17, 1)">
+  <div class="flex justify-between items-center p-6 border-b border-[#333333]">
+    <div class="font-display font-bold text-xl">C.M.</div>
+    <button onclick="closeReservationModal()" class="font-body text-xs uppercase tracking-widest cursor-pointer hover:text-accent transition-colors" data-i18n="close_btn">Cerrar [X]</button>
+  </div>
+  <div class="flex-grow min-h-0 w-full max-w-4xl mx-auto overflow-y-auto p-4 md:p-8">
+    <iframe
+      id="reservaIframe"
+      src="https://aplicaci-n-reservas.vercel.app/es/embed"
+      title="Sistema de reservas"
+      style="width:100%; min-height:700px; border:none; display:block;"
+      loading="lazy"
+      scrolling="no"
+    ></iframe>
+  </div>
+</div>
+
+<div class="blueprint-grid">
+  <!-- Sidebar Navigation -->
+  <aside class="hidden md:flex flex-col justify-between items-center py-10 border-r-grid sticky top-0 h-screen">
+    <div class="font-display font-bold text-xl writing-vertical-rl transform -rotate-180 cursor-pointer">
+      C.M.
+    </div>
+    <nav class="flex flex-col gap-12 font-body text-xs tracking-[0.2em] uppercase vertical-text">
+      <a href="#carta" class="hover:text-accent transition-colors" data-i18n="nav_carta">Carta</a>
+      <a href="#experiencia" class="hover:text-accent transition-colors" data-i18n="nav_concepto">Concepto</a>
+      <button onclick="openReservationModal()" class="hover:text-accent transition-colors uppercase tracking-[0.2em]" data-i18n="nav_reservar">Reservar</button>
+    </nav>
+    <div class="text-[10px] tracking-widest text-grid vertical-text">
+      EST. 2019
+    </div>
+  </aside>
+
+  <div class="md:hidden flex justify-between items-center px-5 border-b-grid h-[60px] sticky top-0 bg-bgDark z-[50]">
+    <div class="font-display font-bold text-xl">C.M.</div>
+    <div class="flex items-center gap-5">
+      <button onclick="openReservationModal()" class="font-body text-[10px] md:text-xs uppercase tracking-widest border border-fgLight px-3 py-1.5 hover:bg-fgLight hover:text-bgDark transition-colors no-underline text-fgLight" data-i18n="btn_reservar">Reservar Mesa</button>
+      <button id="openMenuBtn" class="font-body text-xs uppercase tracking-widest cursor-pointer hover:text-accent transition-colors" data-i18n="btn_menu">Menú</button>
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <main class="col-span-2">
+    
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col justify-center px-6 md:px-12 py-20 relative border-b-grid">
+      <!-- Desktop Fixed Reservar Mesa -->
+      <div class="hidden md:block fixed top-10 right-10 z-[100]">
+        <button onclick="openReservationModal()" class="btn-sharp border border-fgLight px-8 py-4 font-body text-xs uppercase tracking-widest font-bold text-bgDark bg-fgLight cursor-pointer hover:bg-bgDark hover:text-fgLight transition-colors" data-i18n="btn_reservar">
+          Reservar Mesa
+        </button>
+      </div>
+      
+      <div class="z-10 mt-20">
+        <h1 class="font-display font-extrabold text-massive uppercase text-fgLight m-0 reveal" data-i18n="hero_title1">
+          Corte
+        </h1>
+        <h1 class="font-display font-extrabold text-massive uppercase text-fgLight m-0 -mt-4 md:-mt-12 reveal" style="transition-delay: 0.1s;" data-i18n="hero_title2">
+          De Manga
+        </h1>
+      </div>
+      
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 reveal" style="transition-delay: 0.2s;">
+        <p class="font-body text-lg md:text-xl font-light leading-relaxed max-w-md" data-i18n="hero_desc">
+          Cocina de verdad, hecha con las manos y a fuego lento. Recetas de toda la vida, producto de mercado y mucho mimo en cada plato. Aquí vienes a disfrutar.
+        </p>
+        <div class="flex items-end md:justify-end">
+          <button onclick="openReservationModal()" class="btn-sharp border border-fgLight px-8 py-4 font-body text-xs uppercase tracking-widest font-bold text-fgLight cursor-pointer hover:bg-fgLight hover:text-bgDark transition-colors" data-i18n="btn_reservar">
+            Reservar Mesa
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee">
+      <span data-i18n="marquee">Gastrobar Premium • Producto de Mercado • Recetas de Siempre • Gastrobar Premium • Producto de Mercado • Recetas de Siempre • </span>
+    </div>
+
+    <!-- The Experience / Protagonistas -->
+    <section id="experiencia" class="grid grid-cols-1 md:grid-cols-2 border-b-grid">
+      <div class="p-8 md:p-16 border-b-grid md:border-b-0 md:border-r-grid flex flex-col justify-between">
+        <h2 class="font-display text-4xl md:text-6xl font-bold uppercase leading-none mb-10" data-i18n="concept_title">
+          Nuestra<br>esencia
+        </h2>
+        <p class="font-body font-light text-fgLight/70 mb-10 max-w-sm leading-relaxed" data-i18n="concept_desc">
+          Nos gusta el bar de siempre, pero bien hecho. Creemos en los guisos, en el producto fresco y en cuidar cada detalle para que te sientas como en casa.
+        </p>
+        <div class="text-xs tracking-[0.2em] text-grid uppercase" data-i18n="concept_badge">Identidad / 01</div>
+      </div>
+      
+      <div class="relative h-[60vh] md:h-auto overflow-hidden group">
+        <img src="img/tiras_pollo.png"
+             class="absolute inset-0 w-full h-full object-cover image-mono" alt="Tiras de pollo rebozadas con salsa miel y mostaza - Corte de Manga gastrobar Barcelona">
+        <div class="absolute inset-0 border-[10px] border-bgDark pointer-events-none"></div>
+      </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="grid grid-cols-1 md:grid-cols-3 border-b-grid">
+      <div class="h-[400px] border-b-grid md:border-b-0 md:border-r-grid relative overflow-hidden group">
+        <img src="img/burrata.png"
+             class="absolute inset-0 w-full h-full object-cover image-mono" alt="Burrata Secchiello - tapa estrella del gastrobar Corte de Manga en el Eixample de Barcelona">
+        <div class="absolute inset-0 bg-bgDark/40 flex items-end p-6">
+          <h3 class="font-display text-2xl uppercase font-bold" data-i18n="gallery_img1">Burrata<br>Secchiello</h3>
+        </div>
+      </div>
+      <div class="h-[400px] border-b-grid md:border-b-0 md:border-r-grid relative overflow-hidden group">
+        <img src="img/alcachofas.png"
+             class="absolute inset-0 w-full h-full object-cover image-mono" alt="Alcachofas de Tudela confitadas con jamón ibérico y yema - Corte de Manga Barcelona">
+        <div class="absolute inset-0 bg-bgDark/40 flex items-end p-6">
+          <h3 class="font-display text-2xl uppercase font-bold" data-i18n="gallery_img2">Alcachofas<br>Tudela</h3>
+        </div>
+      </div>
+      <div class="h-[400px] relative overflow-hidden group">
+        <img src="img/carrillera.png"
+             class="absolute inset-0 w-full h-full object-cover image-mono" alt="Carrillera de cerdo guisada al vino tinto con puré cremoso - gastrobar Eixample Barcelona">
+        <div class="absolute inset-0 bg-bgDark/40 flex items-end p-6">
+          <h3 class="font-display text-2xl uppercase font-bold" data-i18n="gallery_img3">Carrillera<br>Vino Tinto</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu / Carta (Brutalist Accordion) -->
+    <section id="carta" class="border-b-grid">
+      <div class="p-8 md:p-16 border-b-grid">
+        <h2 class="font-display text-5xl md:text-8xl font-bold uppercase leading-none text-center" data-i18n="carta_title">
+          La Carta
+        </h2>
+      </div>
+      
+      <!-- Accordion Container -->
+      <div id="carta-container" class="w-full flex flex-col">
+        <!-- JS will inject the categories here -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-8 md:p-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
+      <div>
+        <h3 class="font-display text-3xl font-bold uppercase mb-4">Corte de Manga</h3>
+        <address class="not-italic font-body text-sm font-light text-fgLight/60 max-w-xs">
+          <a href="https://maps.google.com/?q=Corte+de+Manga+Comte+d'Urgell+108+Barcelona" target="_blank" rel="noopener noreferrer" class="hover:text-fgLight transition-colors no-underline">
+            Comte d'Urgell 108<br>08011 Barcelona
+          </a><br>
+          <a href="tel:+34623216562" class="hover:text-fgLight transition-colors">+34 623 216 562</a><br>
+          <a href="mailto:info@cortedemanga.com" class="hover:text-fgLight transition-colors">info@cortedemanga.com</a>
+        </address>
+      </div>
+      <div class="text-left md:text-right font-body text-xs uppercase tracking-widest text-fgLight/40">
+        <p class="mb-2" data-i18n="footer_hours">Lun - Dom / 08:00 - 01:00</p>
+        <p data-i18n="footer_rights">© 2026 Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  // 1. Lógica Multi-idioma
+  let currentLang = 'es';
+  
+  // Detectar idioma inicial
+  const browserLang = navigator.language.slice(0, 2);
+  if (['es', 'en', 'ca'].includes(browserLang)) {
+    currentLang = browserLang;
+  }
+
+  function setLanguage(lang) {
+    currentLang = lang;
+    
+    // Actualizar botones del selector
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      if(btn.dataset.lang === lang) {
+        btn.classList.add('font-bold', 'text-fgLight');
+        btn.classList.remove('text-fgLight/50');
+      } else {
+        btn.classList.remove('font-bold', 'text-fgLight');
+        btn.classList.add('text-fgLight/50');
+      }
+    });
+
+    // Traducir textos estáticos
+    if(typeof DICT !== 'undefined' && DICT[lang]) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if(DICT[lang][key]) {
+          el.innerHTML = DICT[lang][key];
+        }
+      });
+    }
+
+    // Volver a renderizar la carta
+    renderCarta();
+  }
+
+  // 2. Renderizar Carta Dinámica (Acordeón)
+  function renderCarta() {
+    const cartaContainer = document.getElementById('carta-container');
+    if(!cartaContainer) return;
+    
+    cartaContainer.innerHTML = ''; // Limpiar previa
+    
+    if(typeof CARTA_DB !== 'undefined' && CARTA_DB[currentLang]) {
+      CARTA_DB[currentLang].forEach((categoriaObj, index) => {
+        // Header (Categoría)
+        const header = document.createElement('div');
+        header.className = 'accordion-header cursor-pointer p-6 md:p-10 border-b-grid flex justify-between items-center transition-colors hover:bg-fgLight hover:text-bgDark';
+        header.innerHTML = `
+          <h3 class="font-display text-2xl md:text-5xl uppercase font-bold m-0 pointer-events-none">${categoriaObj.categoria}</h3>
+          <span class="font-body text-3xl font-light pointer-events-none">+</span>
+        `;
+        
+        // Content (Platos)
+        const content = document.createElement('div');
+        content.className = 'accordion-content hidden border-b-grid bg-[#0a0a0a]';
+        
+        categoriaObj.platos.forEach(plato => {
+          const item = document.createElement('div');
+          item.className = 'menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start hover:bg-[#151515] transition-colors';
+          item.innerHTML = `
+            <div>
+              <h4 class="font-display text-lg md:text-xl uppercase font-bold mb-1">${plato.nombre}</h4>
+              <p class="font-body text-xs text-fgLight/60 max-w-[300px]">${plato.desc}</p>
+            </div>
+            <div class="font-display text-lg md:text-xl font-bold ml-4 whitespace-nowrap">${plato.precio}</div>
+          `;
+          content.appendChild(item);
+        });
+
+        // Lógica Acordeón
+        header.addEventListener('click', () => {
+          const isOpen = !content.classList.contains('hidden');
+          
+          // Cerrar todos
+          document.querySelectorAll('.accordion-content').forEach(el => el.classList.add('hidden'));
+          document.querySelectorAll('.accordion-header span').forEach(el => el.textContent = '+');
+          
+          // Abrir el seleccionado si no estaba abierto
+          if(!isOpen) {
+            content.classList.remove('hidden');
+            header.querySelector('span').textContent = '-';
+          }
+        });
+
+        cartaContainer.appendChild(header);
+        cartaContainer.appendChild(content);
+      });
+    }
+  }
+
+  // 3. Auto-resize iframe via postMessage
+  window.addEventListener("message", (e) => {
+    if (e.data?.type === "cmResize") {
+      const iframe = document.getElementById("reservaIframe");
+      if (iframe) iframe.style.height = e.data.height + "px";
+    }
+  });
+
+  // Modal de Reservas
+  function openReservationModal() {
+    document.getElementById('reservaModal').classList.remove('translate-y-full');
+    // No overflow:hidden en body — en iOS bloquea el scroll de los hijos del modal
+    if (typeof lenis !== 'undefined') lenis.stop();
+  }
+  function closeReservationModal() {
+    document.getElementById('reservaModal').classList.add('translate-y-full');
+    if (typeof lenis !== 'undefined') lenis.start();
+  }
+
+  // Lenis escucha wheel en window con preventDefault() — aunque esté stopped.
+  // Cortamos la propagación dentro del modal para que el contenedor scrollee nativo.
+  document.getElementById('reservaModal').addEventListener('wheel', (e) => {
+    e.stopPropagation();
+  }, { passive: false });
+
+  // 4. Inicializar Lenis (Smooth Scroll)
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    direction: 'vertical',
+    gestureDirection: 'vertical',
+    smooth: true,
+    mouseMultiplier: 1,
+    smoothTouch: false,
+    touchMultiplier: 2,
+    infinite: false,
+  })
+
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+  requestAnimationFrame(raf)
+
+  // 5. Cursor Personalizado
+  const cursor = document.getElementById('customCursor');
+  if (window.matchMedia("(pointer: fine)").matches) {
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+    
+    // Configurar hover state en interactivos
+    const setupInteractivity = () => {
+      const interactives = document.querySelectorAll('a, button, .cursor-pointer, .menu-item, .accordion-header');
+      interactives.forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('hover'), { once: true });
+        el.addEventListener('mouseleave', () => cursor.classList.remove('hover'), { once: true });
+      });
+    };
+    setupInteractivity();
+    // Volver a configurar si el DOM cambia (ej. renderCarta)
+    setInterval(setupInteractivity, 2000); 
+  }
+
+  // 6. Menú Móvil Arquitectónico
+  const mobileMenu = document.getElementById('mobileMenu');
+  const openMenuBtn = document.getElementById('openMenuBtn');
+  const closeMenuBtn = document.getElementById('closeMenuBtn');
+  const closeLinks = document.querySelectorAll('.close-on-click');
+
+  const toggleMenu = () => mobileMenu.classList.toggle('open');
+  openMenuBtn.addEventListener('click', toggleMenu);
+  closeMenuBtn.addEventListener('click', toggleMenu);
+  closeLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+  // 7. Animaciones Scroll (Reveal)
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  setLanguage(currentLang);
+
+</script>
+
+<!-- Language Selector FAB -->
+<div class="fixed bottom-24 right-6 md:bottom-28 md:right-10 z-[100] flex flex-col gap-1 text-[10px] uppercase tracking-widest font-body bg-bgDark border border-fgLight px-3 py-2 text-fgLight/50 btn-sharp group hover:border-accent transition-colors">
+  <div class="flex gap-3">
+    <button onclick="setLanguage('es')" class="lang-btn hover:text-fgLight transition-colors" data-lang="es">ES</button>
+    <span>|</span>
+    <button onclick="setLanguage('en')" class="lang-btn hover:text-fgLight transition-colors" data-lang="en">EN</button>
+    <span>|</span>
+    <button onclick="setLanguage('ca')" class="lang-btn hover:text-fgLight transition-colors" data-lang="ca">CA</button>
+  </div>
+</div>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/34623216562" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] bg-bgDark border border-fgLight px-5 py-4 flex items-center gap-3 hover:bg-fgLight hover:text-bgDark transition-colors group cursor-pointer no-underline text-fgLight btn-sharp">
+  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  <span class="font-body text-xs uppercase tracking-[0.2em] font-bold">WhatsApp</span>
+</a>
+
+</body>
+</html>
