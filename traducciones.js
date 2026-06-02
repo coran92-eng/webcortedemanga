@@ -9,7 +9,7 @@ const DICT = {
     marquee: "Gastrobar Premium • Producto de Mercado • Recetas de Siempre • Gastrobar Premium • Producto de Mercado • Recetas de Siempre • ",
     concept_title: "Nuestra<br>esencia",
     concept_desc: "Nos gusta el bar de siempre, pero bien hecho. Creemos en los guisos, en el producto fresco y en cuidar cada detalle para que te sientas como en casa.",
-    concept_badge: "Tradición / 01",
+    concept_badge: "Identidad / 01",
     gallery_img1: "Burrata<br>Secchiello",
     gallery_img2: "Alcachofas<br>Tudela",
     gallery_img3: "Carrillera<br>Vino Tinto",
