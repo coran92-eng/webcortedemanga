@@ -24,7 +24,7 @@
   <link rel="alternate" hreflang="x-default" href="https://cortedemanga.es/">
 
   <!-- Open Graph -->
-  <meta property="og:type" content="restaurant">
+  <meta property="og:type" content="website">
   <meta property="og:title" content="Corte de Manga | Gastrobar en el Eixample, Barcelona">
   <meta property="og:description" content="Gastrobar en el Eixample de Barcelona. Cocina de mercado, tapas artesanales y cócteles de autor. Abierto todos los días de 08:00 a 01:00.">
   <meta property="og:url" content="https://cortedemanga.es/">
@@ -286,7 +286,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Preload critical above-fold assets -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syne:wght@600;700;800&display=swap" as="style">
   <link rel="preload" href="img/tiras_pollo.png" as="image" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 
@@ -489,9 +488,16 @@
       text-decoration: none;
       color: #EBEBEB;
     }
-    .mobile-menu-link:hover, .mobile-menu-link:active { 
-      color: #B12A2A; 
+    .mobile-menu-link:hover, .mobile-menu-link:active {
+      color: #B12A2A;
       padding-left: 2.5rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee span { animation: none; padding-left: 1rem; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .image-mono { transition: none; }
+      .btn-sharp::before { transition: none; }
     }
   </style>
 </head>
@@ -504,12 +510,12 @@
 <div class="mobile-menu-overlay" id="mobileMenu">
   <div class="flex justify-between items-center p-6 border-b border-[#333333]">
     <div class="font-display font-bold text-xl">C.M.</div>
-    <button id="closeMenuBtn" class="font-body text-xs uppercase tracking-widest cursor-pointer hover:text-accent transition-colors">Cerrar [X]</button>
+    <button type="button" id="closeMenuBtn" aria-label="Cerrar menú" class="font-body text-xs uppercase tracking-widest cursor-pointer hover:text-accent transition-colors">Cerrar [X]</button>
   </div>
   <nav class="flex flex-col flex-grow">
     <a href="#carta" class="mobile-menu-link close-on-click" data-i18n="nav_carta">Carta</a>
     <a href="#experiencia" class="mobile-menu-link close-on-click" data-i18n="nav_concepto">Concepto</a>
-    <button onclick="openReservationModal()" class="mobile-menu-link text-left" data-i18n="nav_reservar">Reservar</button>
+    <button type="button" onclick="openReservationModal()" aria-label="Abrir formulario de reserva" class="mobile-menu-link text-left" data-i18n="nav_reservar">Reservar</button>
   </nav>
 </div>
 
@@ -517,7 +523,7 @@
 <div id="reservaModal" class="fixed inset-0 bg-[#050505] z-[200] flex flex-col transform translate-y-full transition-transform duration-700 cubic-bezier(0.83, 0, 0.17, 1)">
   <div class="flex justify-between items-center p-6 border-b border-[#333333]">
     <div class="font-display font-bold text-xl">C.M.</div>
-    <button onclick="closeReservationModal()" class="font-body text-xs uppercase tracking-widest cursor-pointer hover:text-accent transition-colors" data-i18n="close_btn">Cerrar [X]</button>
+    <button type="button" onclick="closeReservationModal()" aria-label="Cerrar modal de reservas" class="font-body text-xs uppercase tracking-widest cursor-pointer hover:text-accent transition-colors" data-i18n="close_btn">Cerrar [X]</button>
   </div>
   <div class="flex-grow min-h-0 w-full max-w-4xl mx-auto overflow-y-auto p-4 md:p-8">
     <iframe
@@ -540,7 +546,7 @@
     <nav class="flex flex-col gap-12 font-body text-xs tracking-[0.2em] uppercase vertical-text">
       <a href="#carta" class="hover:text-accent transition-colors" data-i18n="nav_carta">Carta</a>
       <a href="#experiencia" class="hover:text-accent transition-colors" data-i18n="nav_concepto">Concepto</a>
-      <button onclick="openReservationModal()" class="hover:text-accent transition-colors uppercase tracking-[0.2em]" data-i18n="nav_reservar">Reservar</button>
+      <button type="button" onclick="openReservationModal()" aria-label="Abrir formulario de reserva" class="hover:text-accent transition-colors uppercase tracking-[0.2em]" data-i18n="nav_reservar">Reservar</button>
     </nav>
     <div class="text-[10px] tracking-widest text-grid vertical-text">
       EST. 2019
@@ -550,8 +556,8 @@
   <div class="md:hidden flex justify-between items-center px-5 border-b-grid h-[60px] sticky top-0 bg-bgDark z-[50]">
     <div class="font-display font-bold text-xl">C.M.</div>
     <div class="flex items-center gap-5">
-      <button onclick="openReservationModal()" class="font-body text-[10px] md:text-xs uppercase tracking-widest border border-fgLight px-3 py-1.5 hover:bg-fgLight hover:text-bgDark transition-colors no-underline text-fgLight" data-i18n="btn_reservar">Reservar Mesa</button>
-      <button id="openMenuBtn" class="font-body text-xs uppercase tracking-widest cursor-pointer hover:text-accent transition-colors" data-i18n="btn_menu">Menú</button>
+      <button type="button" onclick="openReservationModal()" aria-label="Abrir formulario de reserva" class="font-body text-[10px] md:text-xs uppercase tracking-widest border border-fgLight px-3 py-1.5 hover:bg-fgLight hover:text-bgDark transition-colors no-underline text-fgLight" data-i18n="btn_reservar">Reservar Mesa</button>
+      <button type="button" id="openMenuBtn" aria-label="Abrir menú de navegación" class="font-body text-xs uppercase tracking-widest cursor-pointer hover:text-accent transition-colors" data-i18n="btn_menu">Menú</button>
     </div>
   </div>
 
@@ -562,17 +568,14 @@
     <section class="min-h-screen flex flex-col justify-center px-6 md:px-12 py-20 relative border-b-grid">
       <!-- Desktop Fixed Reservar Mesa -->
       <div class="hidden md:block fixed top-10 right-10 z-[100]">
-        <button onclick="openReservationModal()" class="btn-sharp border border-fgLight px-8 py-4 font-body text-xs uppercase tracking-widest font-bold text-bgDark bg-fgLight cursor-pointer hover:bg-bgDark hover:text-fgLight transition-colors" data-i18n="btn_reservar">
+        <button type="button" onclick="openReservationModal()" aria-label="Abrir formulario de reserva" class="btn-sharp border border-fgLight px-8 py-4 font-body text-xs uppercase tracking-widest font-bold text-bgDark bg-fgLight cursor-pointer hover:bg-bgDark hover:text-fgLight transition-colors" data-i18n="btn_reservar">
           Reservar Mesa
         </button>
       </div>
       
       <div class="z-10 mt-20">
         <h1 class="font-display font-extrabold text-massive uppercase text-fgLight m-0 reveal" data-i18n="hero_title1">
-          Corte
-        </h1>
-        <h1 class="font-display font-extrabold text-massive uppercase text-fgLight m-0 -mt-4 md:-mt-12 reveal" style="transition-delay: 0.1s;" data-i18n="hero_title2">
-          De Manga
+          Corte<br><span style="margin-top: -0.1em; display: block; transition-delay: 0.1s;" data-i18n="hero_title2">De Manga</span>
         </h1>
       </div>
       
@@ -581,7 +584,7 @@
           Cocina de verdad, hecha con las manos y a fuego lento. Recetas de toda la vida, producto de mercado y mucho mimo en cada plato. Aquí vienes a disfrutar.
         </p>
         <div class="flex items-end md:justify-end">
-          <button onclick="openReservationModal()" class="btn-sharp border border-fgLight px-8 py-4 font-body text-xs uppercase tracking-widest font-bold text-fgLight cursor-pointer hover:bg-fgLight hover:text-bgDark transition-colors" data-i18n="btn_reservar">
+          <button type="button" onclick="openReservationModal()" aria-label="Abrir formulario de reserva" class="btn-sharp border border-fgLight px-8 py-4 font-body text-xs uppercase tracking-widest font-bold text-fgLight cursor-pointer hover:bg-fgLight hover:text-bgDark transition-colors" data-i18n="btn_reservar">
             Reservar Mesa
           </button>
         </div>
@@ -691,8 +694,9 @@
   }
 
   function setLanguage(lang) {
+    document.documentElement.lang = lang;
     currentLang = lang;
-    
+
     // Actualizar botones del selector
     document.querySelectorAll('.lang-btn').forEach(btn => {
       if(btn.dataset.lang === lang) {
@@ -839,7 +843,8 @@
     };
     setupInteractivity();
     // Volver a configurar si el DOM cambia (ej. renderCarta)
-    setInterval(setupInteractivity, 2000); 
+    const cartaObserver = new MutationObserver(setupInteractivity);
+    cartaObserver.observe(document.getElementById('carta-container'), { childList: true });
   }
 
   // 6. Menú Móvil Arquitectónico
@@ -871,19 +876,25 @@
 <!-- Language Selector FAB -->
 <div class="fixed bottom-24 right-6 md:bottom-28 md:right-10 z-[100] flex flex-col gap-1 text-[10px] uppercase tracking-widest font-body bg-bgDark border border-fgLight px-3 py-2 text-fgLight/50 btn-sharp group hover:border-accent transition-colors">
   <div class="flex gap-3">
-    <button onclick="setLanguage('es')" class="lang-btn hover:text-fgLight transition-colors" data-lang="es">ES</button>
+    <button type="button" onclick="setLanguage('es')" aria-label="Español" class="lang-btn hover:text-fgLight transition-colors" data-lang="es">ES</button>
     <span>|</span>
-    <button onclick="setLanguage('en')" class="lang-btn hover:text-fgLight transition-colors" data-lang="en">EN</button>
+    <button type="button" onclick="setLanguage('en')" aria-label="English" class="lang-btn hover:text-fgLight transition-colors" data-lang="en">EN</button>
     <span>|</span>
-    <button onclick="setLanguage('ca')" class="lang-btn hover:text-fgLight transition-colors" data-lang="ca">CA</button>
+    <button type="button" onclick="setLanguage('ca')" aria-label="Català" class="lang-btn hover:text-fgLight transition-colors" data-lang="ca">CA</button>
   </div>
 </div>
 
 <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/34623216562" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] bg-bgDark border border-fgLight px-5 py-4 flex items-center gap-3 hover:bg-fgLight hover:text-bgDark transition-colors group cursor-pointer no-underline text-fgLight btn-sharp">
-  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+<a href="https://wa.me/34623216562" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] bg-bgDark border border-fgLight px-5 py-4 flex items-center gap-3 hover:bg-fgLight hover:text-bgDark transition-colors group cursor-pointer no-underline text-fgLight btn-sharp">
+  <svg aria-hidden="true" class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
   <span class="font-body text-xs uppercase tracking-[0.2em] font-bold">WhatsApp</span>
 </a>
 
+<noscript>
+  <style>.blueprint-grid main { padding: 2rem; }</style>
+  <div style="position:fixed;top:0;left:0;right:0;background:#B12A2A;color:#fff;text-align:center;padding:1rem;font-family:sans-serif;z-index:9999;">
+    Esta web requiere JavaScript para mostrar la carta y el sistema de reservas. Por favor actívalo en tu navegador.
+  </div>
+</noscript>
 </body>
 </html>
