@@ -5,8 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Corte de Manga | Gastrobar en el Eixample, Barcelona</title>
   <meta name="description" content="Gastrobar en el Eixample de Barcelona. Cocina de mercado, tapas artesanales y cócteles de autor. Abierto de lunes a domingo, de 08:00 a 01:00. Comte d'Urgell 108, Barcelona.">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="keywords" content="gastrobar Barcelona, tapas Eixample, tapas Barcelona, cócteles Barcelona, restaurante Eixample, cocina de mercado Barcelona, reservar mesa Barcelona, Comte d'Urgell restaurante, croquetas artesanales Barcelona, tortilla española Barcelona">
+  <meta name="author" content="Corte de Manga">
+  <meta name="theme-color" content="#050505">
+  <meta name="geo.region" content="ES-CT">
+  <meta name="geo.placename" content="Barcelona, Eixample">
+  <meta name="geo.position" content="41.38465;2.15385">
+  <meta name="ICBM" content="41.38465, 2.15385">
   <link rel="canonical" href="https://cortedemanga.es/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/img/identidad.png">
 
   <!-- Hreflang -->
   <link rel="alternate" hreflang="es" href="https://cortedemanga.es/">
@@ -23,11 +32,21 @@
   <meta property="og:locale" content="es_ES">
   <meta property="og:locale:alternate" content="en_GB">
   <meta property="og:locale:alternate" content="ca_ES">
+  <meta property="og:image" content="https://cortedemanga.es/img/identidad.png">
+  <meta property="og:image:secure_url" content="https://cortedemanga.es/img/identidad.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image:alt" content="Corte de Manga — Gastrobar en el Eixample de Barcelona">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@cortedemanga">
+  <meta name="twitter:creator" content="@cortedemanga">
   <meta name="twitter:title" content="Corte de Manga | Gastrobar Barcelona">
   <meta name="twitter:description" content="Gastrobar en el Eixample. Cocina de mercado, tapas y cócteles. Abierto de 08:00 a 01:00.">
+  <meta name="twitter:image" content="https://cortedemanga.es/img/identidad.png">
+  <meta name="twitter:image:alt" content="Corte de Manga — Gastrobar en el Eixample de Barcelona">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -41,15 +60,17 @@
         "https://cortedemanga.es/img/identidad.png",
         "https://cortedemanga.es/img/burrata.png",
         "https://cortedemanga.es/img/carrillera.png",
-        "https://cortedemanga.es/img/alcachofas.png"
+        "https://cortedemanga.es/img/alcachofas.png",
+        "https://cortedemanga.es/img/tiras_pollo.png"
       ],
       "description": "Gastrobar en el Eixample de Barcelona. Cocina de mercado, tapas artesanales y cócteles de autor. Abierto de lunes a domingo de 08:00 a 01:00.",
       "url": "https://cortedemanga.es",
       "telephone": "+34623216562",
       "email": "info@cortedemanga.com",
       "priceRange": "€€",
-      "servesCuisine": ["Tapas", "Cocina de Mercado", "Española", "Mediterránea"],
+      "servesCuisine": ["Tapas", "Cocina de Mercado", "Española", "Mediterránea", "Catalana"],
       "hasMenu": "https://cortedemanga.es/#carta",
+      "menu": "https://cortedemanga.es/#carta",
       "acceptsReservations": "True",
       "foundingDate": "2019",
       "address": {
@@ -65,6 +86,7 @@
         "latitude": 41.38465,
         "longitude": 2.15385
       },
+      "hasMap": "https://maps.google.com/?q=Corte+de+Manga+Comte+d'Urgell+108+Barcelona",
       "openingHoursSpecification": [{
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
@@ -77,7 +99,10 @@
         "telephone": "+34623216562",
         "contactType": "reservations",
         "availableLanguage": ["Spanish", "English", "Catalan"]
-      }
+      },
+      "sameAs": [
+        "https://wa.me/34623216562"
+      ]
     },
     {
       "@context": "https://schema.org",
@@ -88,20 +113,187 @@
       "inLanguage": ["es", "en", "ca"],
       "publisher": {
         "@id": "https://cortedemanga.es/#restaurant"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://cortedemanga.es/#carta"
+        },
+        "query-input": "required name=search_term_string"
       }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Menu",
+      "@id": "https://cortedemanga.es/#menu",
+      "name": "La Carta de Corte de Manga",
+      "url": "https://cortedemanga.es/#carta",
+      "inLanguage": "es",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Aperitivos",
+          "hasMenuItem": [
+            {"@type":"MenuItem","name":"Cachonditas","description":"Aceituna gordal clásica con cebolla y pimiento picante","offers":{"@type":"Offer","price":"4","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Pampa","description":"Aceituna gordal al chimichurri argentino","offers":{"@type":"Offer","price":"4.50","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Ibéricas","description":"Aceituna gordal con sabor a jamón de Jabugo","offers":{"@type":"Offer","price":"5","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Piamonte","description":"Aceituna gordal aliñada con trufa blanca","offers":{"@type":"Offer","price":"5","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Gilda Clásica con Anchoa del Cantábrico","offers":{"@type":"Offer","price":"3","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Gilda de Boquerón en Vinagre","offers":{"@type":"Offer","price":"3","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Gilda Matrimonio","description":"Con anchoa y boquerón","offers":{"@type":"Offer","price":"3","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Gilda de Trufa y Queso Curado","description":"Con tomate seco","offers":{"@type":"Offer","price":"3.50","priceCurrency":"EUR"}}
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Tapas",
+          "hasMenuItem": [
+            {"@type":"MenuItem","name":"Albóndigas a la Catalana","description":"Salsa de tomate casera","offers":{"@type":"Offer","price":"12.90","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Canelones de Setas","description":"Con bechamel de trufa","offers":{"@type":"Offer","price":"15","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Alcachofas de Tudela Confitadas","description":"Jamón ibérico y yema","offers":{"@type":"Offer","price":"19","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Carrillera de Cerdo Guisada al Vino Tinto","description":"Con puré cremoso","offers":{"@type":"Offer","price":"17.90","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Pan de Coca con Tomate y AOVE","offers":{"@type":"Offer","price":"4.50","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Patatas Bravas de la Casa","description":"All i oli cítrico y salsa chipotle","offers":{"@type":"Offer","price":"8","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Boniato Frito con Miel de Trufa y Flor de Sal","offers":{"@type":"Offer","price":"10.90","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Ensaladilla Rusa","description":"Ventresca y huevo","offers":{"@type":"Offer","price":"10","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Coca Artesana","description":"Ricotta, pesto y jamón serrano","offers":{"@type":"Offer","price":"13","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Choricitos Asturianos a la Sidra","offers":{"@type":"Offer","price":"11","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Albóndigas de Espinacas y Mozzarella","description":"Ragú de tomate","offers":{"@type":"Offer","price":"12.90","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Tiras de Pollo Rebozadas","description":"Salsa miel y mostaza","offers":{"@type":"Offer","price":"13.90","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Alitas de Pollo Confitadas","description":"Mayonesa de kimchi","offers":{"@type":"Offer","price":"13.90","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Carpaccio de Ternera","description":"Parmesano y AOVE","offers":{"@type":"Offer","price":"13.90","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Tabla de Jamón Ibérico Cortado a Cuchillo","offers":{"@type":"Offer","price":"25","priceCurrency":"EUR"}}
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Nuestras Tortillas",
+          "hasMenuItem": [
+            {"@type":"MenuItem","name":"Tortilla Clásica","offers":{"@type":"Offer","price":"6.90","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Tortilla Sobrasada y Brie","offers":{"@type":"Offer","price":"7.90","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Tortilla Pimiento Verde y Butifarra","offers":{"@type":"Offer","price":"7.90","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Tortilla de Setas","offers":{"@type":"Offer","price":"7.90","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Tortilla Jamón Ibérico y Trufa Negra","offers":{"@type":"Offer","price":"8.90","priceCurrency":"EUR"}}
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Croquetas Artesanales",
+          "hasMenuItem": [
+            {"@type":"MenuItem","name":"Croquetas de Jamón Ibérico","offers":{"@type":"Offer","price":"8","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Croquetas de Bacalao","offers":{"@type":"Offer","price":"8","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Croquetas de Pollo","offers":{"@type":"Offer","price":"8","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Croquetas de Rabo de Toro","offers":{"@type":"Offer","price":"9","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Croquetas de Chipirón en su Tinta","offers":{"@type":"Offer","price":"9","priceCurrency":"EUR"}}
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Latas",
+          "hasMenuItem": [
+            {"@type":"MenuItem","name":"Sardinas Picantes","offers":{"@type":"Offer","price":"8.50","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Sardinas en AOVE","offers":{"@type":"Offer","price":"8.50","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Mejillones en Escabeche Premium","offers":{"@type":"Offer","price":"8.50","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Almejas al Natural","offers":{"@type":"Offer","price":"10.50","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Pulpo en Aceite de Oliva o Salsa Gallega","offers":{"@type":"Offer","price":"10.50","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Berberechos al Natural","offers":{"@type":"Offer","price":"12.50","priceCurrency":"EUR"}}
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Postres",
+          "hasMenuItem": [
+            {"@type":"MenuItem","name":"Coulant de Chocolate","offers":{"@type":"Offer","price":"5","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Brownie de Chocolate","offers":{"@type":"Offer","price":"5","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Coulant de Queso Manchego","offers":{"@type":"Offer","price":"6","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Tarta de Queso Manchego","offers":{"@type":"Offer","price":"6","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Tarta Sacher","offers":{"@type":"Offer","price":"7","priceCurrency":"EUR"}}
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Cocktails",
+          "hasMenuItem": [
+            {"@type":"MenuItem","name":"Melon Breeze","description":"Vodka premium con la suavidad del melón y la intensidad exótica de la fruta de la pasión","offers":{"@type":"Offer","price":"11","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Red Sky","description":"Ginebra aromática con frutos del bosque, esencia de rosas y un toque cítrico","offers":{"@type":"Offer","price":"12","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Peach Breeze","description":"Whisky escocés con melocotón maduro, vainilla cálida","offers":{"@type":"Offer","price":"12","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Mimosa","description":"Zumo de naranja natural con vino espumoso","offers":{"@type":"Offer","price":"4","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Mojito","description":"Ron blanco, lima, hierbabuena fresca, azúcar y soda","offers":{"@type":"Offer","price":"9","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Sex on the Beach","description":"Vodka, licor de melocotón, zumo de naranja y arándanos","offers":{"@type":"Offer","price":"10","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Espresso Martini","description":"Vodka, café espresso recién hecho y licor de café","offers":{"@type":"Offer","price":"10","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Paloma","description":"Tequila Patrón, zumo de lima y refresco de pomelo","offers":{"@type":"Offer","price":"12","priceCurrency":"EUR"}}
+          ]
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://cortedemanga.es/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Dónde está Corte de Manga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Corte de Manga está en el Carrer del Comte d'Urgell 108, 08011 Barcelona, en el barrio del Eixample."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es el horario de Corte de Manga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Corte de Manga abre todos los días de la semana, de lunes a domingo, de 08:00 a 01:00 horas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se puede reservar mesa en Corte de Manga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, en Corte de Manga aceptamos reservas. Puedes reservar mesa a través de nuestra web o llamando al +34 623 216 562."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué tipo de cocina ofrece Corte de Manga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Corte de Manga es un gastrobar especializado en cocina de mercado española y mediterránea: tapas artesanales, tortillas, croquetas caseras, conservas premium y cócteles de autor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo contactar con Corte de Manga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puedes contactarnos por teléfono o WhatsApp en el +34 623 216 562, o por email en info@cortedemanga.com."
+          }
+        }
+      ]
     }
   ]
   </script>
 
+  <!-- DNS prefetch for external resources -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://aplicaci-n-reservas.vercel.app">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Syne for huge brutalist headings, Inter for clinical body text -->
+  <!-- Preload critical above-fold assets -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syne:wght@600;700;800&display=swap" as="style">
+  <link rel="preload" href="img/tiras_pollo.png" as="image" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-  
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="carta.js"></script>
-  <script src="traducciones.js"></script>
-  <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+  <script src="carta.js" defer></script>
+  <script src="traducciones.js" defer></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js" defer></script>
   <script>
     tailwind.config = {
       theme: {
@@ -415,7 +607,9 @@
       
       <div class="relative h-[60vh] md:h-auto overflow-hidden group">
         <img src="img/tiras_pollo.png"
-             class="absolute inset-0 w-full h-full object-cover image-mono" alt="Tiras de pollo rebozadas con salsa miel y mostaza - Corte de Manga gastrobar Barcelona">
+             class="absolute inset-0 w-full h-full object-cover image-mono"
+             alt="Tiras de pollo rebozadas con salsa miel y mostaza - Corte de Manga gastrobar Barcelona"
+             width="1024" height="1024" fetchpriority="high">
         <div class="absolute inset-0 border-[10px] border-bgDark pointer-events-none"></div>
       </div>
     </section>
@@ -424,21 +618,27 @@
     <section class="grid grid-cols-1 md:grid-cols-3 border-b-grid">
       <div class="h-[400px] border-b-grid md:border-b-0 md:border-r-grid relative overflow-hidden group">
         <img src="img/burrata.png"
-             class="absolute inset-0 w-full h-full object-cover image-mono" alt="Burrata Secchiello - tapa estrella del gastrobar Corte de Manga en el Eixample de Barcelona">
+             class="absolute inset-0 w-full h-full object-cover image-mono"
+             alt="Burrata Secchiello - tapa estrella del gastrobar Corte de Manga en el Eixample de Barcelona"
+             width="1024" height="1024" loading="lazy">
         <div class="absolute inset-0 bg-bgDark/40 flex items-end p-6">
           <h3 class="font-display text-2xl uppercase font-bold" data-i18n="gallery_img1">Burrata<br>Secchiello</h3>
         </div>
       </div>
       <div class="h-[400px] border-b-grid md:border-b-0 md:border-r-grid relative overflow-hidden group">
         <img src="img/alcachofas.png"
-             class="absolute inset-0 w-full h-full object-cover image-mono" alt="Alcachofas de Tudela confitadas con jamón ibérico y yema - Corte de Manga Barcelona">
+             class="absolute inset-0 w-full h-full object-cover image-mono"
+             alt="Alcachofas de Tudela confitadas con jamón ibérico y yema - Corte de Manga Barcelona"
+             width="1024" height="1024" loading="lazy">
         <div class="absolute inset-0 bg-bgDark/40 flex items-end p-6">
           <h3 class="font-display text-2xl uppercase font-bold" data-i18n="gallery_img2">Alcachofas<br>Tudela</h3>
         </div>
       </div>
       <div class="h-[400px] relative overflow-hidden group">
         <img src="img/carrillera.png"
-             class="absolute inset-0 w-full h-full object-cover image-mono" alt="Carrillera de cerdo guisada al vino tinto con puré cremoso - gastrobar Eixample Barcelona">
+             class="absolute inset-0 w-full h-full object-cover image-mono"
+             alt="Carrillera de cerdo guisada al vino tinto con puré cremoso - gastrobar Eixample Barcelona"
+             width="1024" height="1024" loading="lazy">
         <div class="absolute inset-0 bg-bgDark/40 flex items-end p-6">
           <h3 class="font-display text-2xl uppercase font-bold" data-i18n="gallery_img3">Carrillera<br>Vino Tinto</h3>
         </div>
@@ -480,10 +680,10 @@
   </main>
 </div>
 
-<script>
+<script defer>
   // 1. Lógica Multi-idioma
   let currentLang = 'es';
-  
+
   // Detectar idioma inicial
   const browserLang = navigator.language.slice(0, 2);
   if (['es', 'en', 'ca'].includes(browserLang)) {
