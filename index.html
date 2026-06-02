@@ -14,6 +14,7 @@
   <meta name="geo.position" content="41.38465;2.15385">
   <meta name="ICBM" content="41.38465, 2.15385">
   <link rel="canonical" href="https://cortedemanga.es/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/img/identidad.png">
 
@@ -609,10 +610,13 @@
       </div>
       
       <div class="relative h-[60vh] md:h-auto overflow-hidden group">
-        <img src="img/tiras_pollo.png"
-             class="absolute inset-0 w-full h-full object-cover image-mono"
-             alt="Tiras de pollo rebozadas con salsa miel y mostaza - Corte de Manga gastrobar Barcelona"
-             width="1024" height="1024" fetchpriority="high">
+        <picture>
+          <source srcset="img/tiras_pollo.webp" type="image/webp">
+          <img src="img/tiras_pollo.png"
+               class="absolute inset-0 w-full h-full object-cover image-mono"
+               alt="Tiras de pollo rebozadas con salsa miel y mostaza - Corte de Manga gastrobar Barcelona"
+               width="1024" height="1024" fetchpriority="high">
+        </picture>
         <div class="absolute inset-0 border-[10px] border-bgDark pointer-events-none"></div>
       </div>
     </section>
@@ -620,28 +624,37 @@
     <!-- Gallery Grid -->
     <section class="grid grid-cols-1 md:grid-cols-3 border-b-grid">
       <div class="h-[400px] border-b-grid md:border-b-0 md:border-r-grid relative overflow-hidden group">
-        <img src="img/burrata.png"
-             class="absolute inset-0 w-full h-full object-cover image-mono"
-             alt="Burrata Secchiello - tapa estrella del gastrobar Corte de Manga en el Eixample de Barcelona"
-             width="1024" height="1024" loading="lazy">
+        <picture>
+          <source srcset="img/burrata.webp" type="image/webp">
+          <img src="img/burrata.png"
+               class="absolute inset-0 w-full h-full object-cover image-mono"
+               alt="Burrata Secchiello - tapa estrella del gastrobar Corte de Manga en el Eixample de Barcelona"
+               width="1024" height="1024" loading="lazy">
+        </picture>
         <div class="absolute inset-0 bg-bgDark/40 flex items-end p-6">
           <h3 class="font-display text-2xl uppercase font-bold" data-i18n="gallery_img1">Burrata<br>Secchiello</h3>
         </div>
       </div>
       <div class="h-[400px] border-b-grid md:border-b-0 md:border-r-grid relative overflow-hidden group">
-        <img src="img/alcachofas.png"
-             class="absolute inset-0 w-full h-full object-cover image-mono"
-             alt="Alcachofas de Tudela confitadas con jamón ibérico y yema - Corte de Manga Barcelona"
-             width="1024" height="1024" loading="lazy">
+        <picture>
+          <source srcset="img/alcachofas.webp" type="image/webp">
+          <img src="img/alcachofas.png"
+               class="absolute inset-0 w-full h-full object-cover image-mono"
+               alt="Alcachofas de Tudela confitadas con jamón ibérico y yema - Corte de Manga Barcelona"
+               width="1024" height="1024" loading="lazy">
+        </picture>
         <div class="absolute inset-0 bg-bgDark/40 flex items-end p-6">
           <h3 class="font-display text-2xl uppercase font-bold" data-i18n="gallery_img2">Alcachofas<br>Tudela</h3>
         </div>
       </div>
       <div class="h-[400px] relative overflow-hidden group">
-        <img src="img/carrillera.png"
-             class="absolute inset-0 w-full h-full object-cover image-mono"
-             alt="Carrillera de cerdo guisada al vino tinto con puré cremoso - gastrobar Eixample Barcelona"
-             width="1024" height="1024" loading="lazy">
+        <picture>
+          <source srcset="img/carrillera.webp" type="image/webp">
+          <img src="img/carrillera.png"
+               class="absolute inset-0 w-full h-full object-cover image-mono"
+               alt="Carrillera de cerdo guisada al vino tinto con puré cremoso - gastrobar Eixample Barcelona"
+               width="1024" height="1024" loading="lazy">
+        </picture>
         <div class="absolute inset-0 bg-bgDark/40 flex items-end p-6">
           <h3 class="font-display text-2xl uppercase font-bold" data-i18n="gallery_img3">Carrillera<br>Vino Tinto</h3>
         </div>
