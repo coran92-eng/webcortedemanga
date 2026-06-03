@@ -582,7 +582,7 @@
       
       <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 reveal" style="transition-delay: 0.2s;">
         <p class="font-body text-lg md:text-xl font-light leading-relaxed max-w-md" data-i18n="hero_desc">
-          Cocina de verdad, hecha con las manos y a fuego lento. Recetas de toda la vida, producto de mercado y mucho mimo en cada plato. Aquí vienes a disfrutar.
+          Gastrobar de tapas en el Eixample de Barcelona. Cocina de verdad, hecha con las manos y a fuego lento. Recetas de toda la vida, producto de mercado y mucho mimo en cada plato. Aquí vienes a disfrutar, en Comte d'Urgell 108.
         </p>
         <div class="flex items-end md:justify-end">
           <button type="button" onclick="openReservationModal()" aria-label="Abrir formulario de reserva" class="btn-sharp border border-fgLight px-8 py-4 font-body text-xs uppercase tracking-widest font-bold text-fgLight cursor-pointer hover:bg-fgLight hover:text-bgDark transition-colors" data-i18n="btn_reservar">
@@ -601,7 +601,7 @@
     <section id="experiencia" class="grid grid-cols-1 md:grid-cols-2 border-b-grid">
       <div class="p-8 md:p-16 border-b-grid md:border-b-0 md:border-r-grid flex flex-col justify-between">
         <h2 class="font-display text-4xl md:text-6xl font-bold uppercase leading-none mb-10" data-i18n="concept_title">
-          Nuestra<br>esencia
+          Gastrobar<br>en el Eixample
         </h2>
         <p class="font-body font-light text-fgLight/70 mb-10 max-w-sm leading-relaxed" data-i18n="concept_desc">
           Nos gusta el bar de siempre, pero bien hecho. Creemos en los guisos, en el producto fresco y en cuidar cada detalle para que te sientas como en casa.
@@ -667,11 +667,188 @@
         <h2 class="font-display text-5xl md:text-8xl font-bold uppercase leading-none text-center" data-i18n="carta_title">
           La Carta
         </h2>
+        <p class="font-body text-sm text-fgLight/50 text-center mt-3 mb-0 tracking-wider uppercase" data-i18n="carta_subtitle">Tapas artesanales y cocina de mercado en el Eixample, Barcelona</p>
       </div>
-      
+
       <!-- Accordion Container -->
-      <div id="carta-container" class="w-full flex flex-col">
-        <!-- JS will inject the categories here -->
+      <div id="carta-container" class="w-full flex flex-col" aria-label="Carta del restaurante Corte de Manga">
+  <!-- APERITIVOS -->
+  <div class="accordion-header p-6 md:p-10 border-b-grid flex justify-between items-center">
+    <h3 class="font-display text-2xl md:text-5xl uppercase font-bold m-0">Aperitivos</h3>
+    <span class="font-body text-3xl font-light">+</span>
+  </div>
+  <div class="accordion-content border-b-grid bg-[#0a0a0a]">
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Cachonditas</h4><p class="font-body text-xs text-fgLight/60">Aceituna gordal clásica con cebolla y pimiento picante</p></div><div class="font-display text-lg font-bold ml-4">4€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Pampa</h4><p class="font-body text-xs text-fgLight/60">Aceituna gordal al chimichurri argentino</p></div><div class="font-display text-lg font-bold ml-4">4.50€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Ibéricas</h4><p class="font-body text-xs text-fgLight/60">Aceituna gordal con sabor a jamón de Jabugo</p></div><div class="font-display text-lg font-bold ml-4">5€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Piamonte</h4><p class="font-body text-xs text-fgLight/60">Aceituna gordal aliñada con trufa blanca</p></div><div class="font-display text-lg font-bold ml-4">5€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Gilda Clásica con Anchoa del Cantábrico</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">3€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Gilda de Boquerón en Vinagre</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">3€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Gilda Matrimonio</h4><p class="font-body text-xs text-fgLight/60">Con anchoa y boquerón</p></div><div class="font-display text-lg font-bold ml-4">3€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Gilda de Trufa y Queso Curado</h4><p class="font-body text-xs text-fgLight/60">Con tomate seco</p></div><div class="font-display text-lg font-bold ml-4">3.50€</div></div>
+  </div>
+  <!-- TAPAS -->
+  <div class="accordion-header p-6 md:p-10 border-b-grid flex justify-between items-center">
+    <h3 class="font-display text-2xl md:text-5xl uppercase font-bold m-0">Tapas</h3>
+    <span class="font-body text-3xl font-light">+</span>
+  </div>
+  <div class="accordion-content border-b-grid bg-[#0a0a0a]">
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Albóndigas a la Catalana</h4><p class="font-body text-xs text-fgLight/60">Salsa de tomate casera</p></div><div class="font-display text-lg font-bold ml-4">12.90€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Canelones de Setas</h4><p class="font-body text-xs text-fgLight/60">Con bechamel de trufa</p></div><div class="font-display text-lg font-bold ml-4">15€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Alcachofas de Tudela Confitadas</h4><p class="font-body text-xs text-fgLight/60">Jamón ibérico y yema</p></div><div class="font-display text-lg font-bold ml-4">19€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Carrillera de Cerdo Guisada al Vino Tinto</h4><p class="font-body text-xs text-fgLight/60">Con puré cremoso</p></div><div class="font-display text-lg font-bold ml-4">17.90€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Pan de Coca con Tomate y AOVE</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">4.50€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Patatas Bravas de la Casa</h4><p class="font-body text-xs text-fgLight/60">All i oli cítrico y salsa chipotle</p></div><div class="font-display text-lg font-bold ml-4">8€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Boniato Frito con Miel de Trufa y Flor de Sal</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">10.90€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Ensaladilla Rusa</h4><p class="font-body text-xs text-fgLight/60">Ventresca y huevo</p></div><div class="font-display text-lg font-bold ml-4">10€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Coca Artesana</h4><p class="font-body text-xs text-fgLight/60">Ricotta, pesto y jamón serrano</p></div><div class="font-display text-lg font-bold ml-4">13€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Choricitos Asturianos a la Sidra</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">11€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Albóndigas de Espinacas y Mozzarella</h4><p class="font-body text-xs text-fgLight/60">Ragú de tomate</p></div><div class="font-display text-lg font-bold ml-4">12.90€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Tiras de Pollo Rebozadas</h4><p class="font-body text-xs text-fgLight/60">Salsa miel y mostaza</p></div><div class="font-display text-lg font-bold ml-4">13.90€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Alitas de Pollo Confitadas</h4><p class="font-body text-xs text-fgLight/60">Mayonesa de kimchi</p></div><div class="font-display text-lg font-bold ml-4">13.90€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Carpaccio de Ternera</h4><p class="font-body text-xs text-fgLight/60">Parmesano y AOVE</p></div><div class="font-display text-lg font-bold ml-4">13.90€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Tabla de Jamón Ibérico Cortado a Cuchillo</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">25€</div></div>
+  </div>
+  <!-- TORTILLAS -->
+  <div class="accordion-header p-6 md:p-10 border-b-grid flex justify-between items-center">
+    <h3 class="font-display text-2xl md:text-5xl uppercase font-bold m-0">Nuestras Tortillas</h3>
+    <span class="font-body text-3xl font-light">+</span>
+  </div>
+  <div class="accordion-content border-b-grid bg-[#0a0a0a]">
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Clásica</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">6.90€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Sobrasada y Brie</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">7.90€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Pimiento Verde y Butifarra</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">7.90€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Setas</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">7.90€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Jamón Ibérico y Trufa Negra</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">8.90€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Especial del Día</h4><p class="font-body text-xs text-fgLight/60">Pregúntanos</p></div><div class="font-display text-lg font-bold ml-4">—</div></div>
+  </div>
+  <!-- CROQUETAS -->
+  <div class="accordion-header p-6 md:p-10 border-b-grid flex justify-between items-center">
+    <h3 class="font-display text-2xl md:text-5xl uppercase font-bold m-0">Croquetas Artesanales</h3>
+    <span class="font-body text-3xl font-light">+</span>
+  </div>
+  <div class="accordion-content border-b-grid bg-[#0a0a0a]">
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Jamón Ibérico</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">8€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Bacalao</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">8€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Pollo</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">8€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Rabo de Toro</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">9€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Chipirón en su Tinta</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">9€</div></div>
+  </div>
+  <!-- LATAS -->
+  <div class="accordion-header p-6 md:p-10 border-b-grid flex justify-between items-center">
+    <h3 class="font-display text-2xl md:text-5xl uppercase font-bold m-0">Latas</h3>
+    <span class="font-body text-3xl font-light">+</span>
+  </div>
+  <div class="accordion-content border-b-grid bg-[#0a0a0a]">
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Sardinas Picantes</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">8.50€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Sardinas en AOVE</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">8.50€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Mejillones en Escabeche Premium</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">8.50€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Almejas al Natural</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">10.50€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Pulpo en Aceite de Oliva o Salsa Gallega</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">10.50€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Berberechos al Natural</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">12.50€</div></div>
+  </div>
+  <!-- POSTRES -->
+  <div class="accordion-header p-6 md:p-10 border-b-grid flex justify-between items-center">
+    <h3 class="font-display text-2xl md:text-5xl uppercase font-bold m-0">Postres</h3>
+    <span class="font-body text-3xl font-light">+</span>
+  </div>
+  <div class="accordion-content border-b-grid bg-[#0a0a0a]">
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Coulant de Chocolate</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">5€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Brownie de Chocolate</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">5€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Coulant de Queso Manchego</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">6€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Tarta de Queso Manchego</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">6€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Tarta Sacher</h4><p class="font-body text-xs text-fgLight/60"></p></div><div class="font-display text-lg font-bold ml-4">7€</div></div>
+  </div>
+  <!-- COCKTAILS -->
+  <div class="accordion-header p-6 md:p-10 border-b-grid flex justify-between items-center">
+    <h3 class="font-display text-2xl md:text-5xl uppercase font-bold m-0">Cocktails</h3>
+    <span class="font-body text-3xl font-light">+</span>
+  </div>
+  <div class="accordion-content border-b-grid bg-[#0a0a0a]">
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Melon Breeze</h4><p class="font-body text-xs text-fgLight/60">Vodka premium con la suavidad del melón y la intensidad exótica de la fruta de la pasión</p></div><div class="font-display text-lg font-bold ml-4">11€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Red Sky</h4><p class="font-body text-xs text-fgLight/60">Ginebra aromática con frutos del bosque, esencia de rosas y un toque cítrico refrescante</p></div><div class="font-display text-lg font-bold ml-4">12€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Peach Breeze</h4><p class="font-body text-xs text-fgLight/60">Whisky escocés con melocotón maduro, base intensa y jugosa con vainilla cálida</p></div><div class="font-display text-lg font-bold ml-4">12€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Mimosa</h4><p class="font-body text-xs text-fgLight/60">Zumo de naranja natural con vino espumoso</p></div><div class="font-display text-lg font-bold ml-4">4€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Mojito</h4><p class="font-body text-xs text-fgLight/60">Ron blanco, lima, hierbabuena fresca, azúcar y soda</p></div><div class="font-display text-lg font-bold ml-4">9€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Sex on the Beach</h4><p class="font-body text-xs text-fgLight/60">Vodka, licor de melocotón, zumo de naranja y arándanos</p></div><div class="font-display text-lg font-bold ml-4">10€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Espresso Martini</h4><p class="font-body text-xs text-fgLight/60">Vodka, café espresso recién hecho y licor de café</p></div><div class="font-display text-lg font-bold ml-4">10€</div></div>
+    <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Paloma</h4><p class="font-body text-xs text-fgLight/60">Tequila Patrón, zumo de lima y refresco de pomelo</p></div><div class="font-display text-lg font-bold ml-4">12€</div></div>
+  </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="border-b-grid p-8 md:p-16" id="preguntas-frecuentes">
+      <h2 class="font-display text-3xl md:text-5xl font-bold uppercase leading-none mb-10">Preguntas frecuentes</h2>
+      <div class="flex flex-col divide-y divide-[#222]">
+        <details class="py-5 group">
+          <summary class="font-display text-lg md:text-2xl uppercase font-bold cursor-pointer list-none flex justify-between items-center hover:text-accent transition-colors">
+            ¿Dónde está Corte de Manga?
+            <span class="font-body text-2xl font-light ml-4 group-open:rotate-45 transition-transform inline-block">+</span>
+          </summary>
+          <p class="font-body text-sm text-fgLight/70 mt-3 leading-relaxed">Corte de Manga está en el <strong>Carrer del Comte d'Urgell 108, en el Eixample de Barcelona</strong>. Cerca del metro Urgell (L1) y Hospital Clínic (L5). Uno de los gastrobares más valorados del Eixample.</p>
+        </details>
+        <details class="py-5 group">
+          <summary class="font-display text-lg md:text-2xl uppercase font-bold cursor-pointer list-none flex justify-between items-center hover:text-accent transition-colors">
+            ¿Cuál es el horario?
+            <span class="font-body text-2xl font-light ml-4 group-open:rotate-45 transition-transform inline-block">+</span>
+          </summary>
+          <p class="font-body text-sm text-fgLight/70 mt-3 leading-relaxed">Abrimos <strong>todos los días de la semana, de lunes a domingo, de 08:00 a 01:00</strong>. Puedes venir a desayunar, comer, merendar o cenar. El gastrobar nunca cierra.</p>
+        </details>
+        <details class="py-5 group">
+          <summary class="font-display text-lg md:text-2xl uppercase font-bold cursor-pointer list-none flex justify-between items-center hover:text-accent transition-colors">
+            ¿Se puede reservar mesa?
+            <span class="font-body text-2xl font-light ml-4 group-open:rotate-45 transition-transform inline-block">+</span>
+          </summary>
+          <p class="font-body text-sm text-fgLight/70 mt-3 leading-relaxed">Sí, <strong>aceptamos reservas</strong>. Puedes hacerlo directamente desde nuestra web pulsando "Reservar Mesa", o llamando al <a href="tel:+34623216562" class="hover:text-accent transition-colors">+34 623 216 562</a>. Recomendamos reservar especialmente para cenas de fin de semana.</p>
+        </details>
+        <details class="py-5 group">
+          <summary class="font-display text-lg md:text-2xl uppercase font-bold cursor-pointer list-none flex justify-between items-center hover:text-accent transition-colors">
+            ¿Qué tipo de cocina ofrecéis?
+            <span class="font-body text-2xl font-light ml-4 group-open:rotate-45 transition-transform inline-block">+</span>
+          </summary>
+          <p class="font-body text-sm text-fgLight/70 mt-3 leading-relaxed">Somos un <strong>gastrobar de tapas en Barcelona</strong> especializado en cocina de mercado española y mediterránea. Nuestra carta incluye <strong>tapas artesanales, tortillas caseras, croquetas</strong>, conservas premium y cócteles de autor. Todo hecho con producto fresco y técnica.</p>
+        </details>
+        <details class="py-5 group">
+          <summary class="font-display text-lg md:text-2xl uppercase font-bold cursor-pointer list-none flex justify-between items-center hover:text-accent transition-colors">
+            ¿Cómo contactar con Corte de Manga?
+            <span class="font-body text-2xl font-light ml-4 group-open:rotate-45 transition-transform inline-block">+</span>
+          </summary>
+          <p class="font-body text-sm text-fgLight/70 mt-3 leading-relaxed">Puedes contactarnos por teléfono o WhatsApp en el <a href="tel:+34623216562" class="hover:text-accent transition-colors">+34 623 216 562</a>, o por email en <a href="mailto:info@cortedemanga.com" class="hover:text-accent transition-colors">info@cortedemanga.com</a>. También puedes escribirnos por WhatsApp pulsando el botón flotante de la web.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Cómo llegar -->
+    <section class="border-b-grid p-8 md:p-16 grid grid-cols-1 md:grid-cols-2 gap-10" id="como-llegar" itemscope itemtype="https://schema.org/Place">
+      <div>
+        <h2 class="font-display text-3xl md:text-5xl font-bold uppercase leading-none mb-6">Cómo llegar</h2>
+        <p class="font-body text-sm font-light text-fgLight/70 leading-relaxed mb-4">
+          Nos encontramos en el corazón del <strong>Eixample de Barcelona</strong>, en el barrio de la <strong>Esquerra de l'Eixample</strong>. Si buscas un <strong>bar de tapas en Barcelona</strong> con cocina de mercado y ambiente de gastrobar, estamos a solo unos minutos andando desde varios puntos del centro.
+        </p>
+        <address class="not-italic font-body text-sm font-light text-fgLight/70 leading-relaxed">
+          <strong class="text-fgLight">Corte de Manga</strong><br>
+          Carrer del Comte d'Urgell, 108<br>
+          Eixample — Barcelona<br>
+          <a href="tel:+34623216562" class="hover:text-fgLight transition-colors">+34 623 216 562</a>
+        </address>
+        <div class="mt-6 font-body text-xs uppercase tracking-widest text-fgLight/40">
+          <p class="mb-1">🚇 Metro: Urgell (L1) · Hospital Clínic (L5)</p>
+          <p class="mb-1">🚌 Bus: 9, 27, 54, 56</p>
+          <p>🕐 Abierto todos los días: 08:00 – 01:00</p>
+        </div>
+      </div>
+      <div class="h-[300px] md:h-auto">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.3!2d2.15185!3d41.38265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f4b7b7b7b7%3A0x1!2sCarrer+del+Comte+d'Urgell%2C+108%2C+Barcelona!5e0!3m2!1ses!2ses!4v1"
+          width="100%" height="100%"
+          style="border:0; min-height:250px; filter:grayscale(100%) contrast(1.1);"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de ubicación de Corte de Manga, gastrobar en el Eixample de Barcelona"
+          aria-label="Mapa de Google Maps mostrando la ubicación del gastrobar Corte de Manga en el Eixample de Barcelona">
+        </iframe>
       </div>
     </section>
 
@@ -679,9 +856,10 @@
     <footer class="p-8 md:p-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
       <div>
         <h3 class="font-display text-3xl font-bold uppercase mb-4">Corte de Manga</h3>
+        <p class="font-body text-xs text-fgLight/40 mb-4 uppercase tracking-wider">Gastrobar · Bar de Tapas · Eixample Barcelona</p>
         <address class="not-italic font-body text-sm font-light text-fgLight/60 max-w-xs">
           <a href="https://maps.google.com/?q=Corte+de+Manga+Comte+d'Urgell+108+Barcelona" target="_blank" rel="noopener noreferrer" class="hover:text-fgLight transition-colors no-underline">
-            Comte d'Urgell 108<br>08011 Barcelona
+            Comte d'Urgell 108<br>Eixample — 08036 Barcelona
           </a><br>
           <a href="tel:+34623216562" class="hover:text-fgLight transition-colors">+34 623 216 562</a><br>
           <a href="mailto:info@cortedemanga.com" class="hover:text-fgLight transition-colors">info@cortedemanga.com</a>
