@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
     <loc>https://cortedemanga.es/</loc>
@@ -12,6 +13,31 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cortedemanga.es/"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://cortedemanga.es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cortedemanga.es/"/>
+    <image:image>
+      <image:loc>https://cortedemanga.es/img/identidad.webp</image:loc>
+      <image:title>Corte de Manga — Gastrobar en el Eixample de Barcelona</image:title>
+      <image:caption>Imagen de identidad del gastrobar Corte de Manga en Comte d'Urgell 108, Eixample, Barcelona</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cortedemanga.es/img/tiras_pollo.webp</image:loc>
+      <image:title>Tiras de pollo rebozadas con salsa miel y mostaza</image:title>
+      <image:caption>Tiras de pollo rebozadas con salsa miel y mostaza — tapa del gastrobar Corte de Manga, Eixample Barcelona</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cortedemanga.es/img/burrata.webp</image:loc>
+      <image:title>Burrata Secchiello — tapa de Corte de Manga Barcelona</image:title>
+      <image:caption>Burrata Secchiello, tapa estrella del gastrobar Corte de Manga en el Eixample de Barcelona</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cortedemanga.es/img/alcachofas.webp</image:loc>
+      <image:title>Alcachofas de Tudela confitadas con jamón ibérico y yema</image:title>
+      <image:caption>Alcachofas de Tudela confitadas con jamón ibérico y yema — Corte de Manga gastrobar Barcelona</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cortedemanga.es/img/carrillera.webp</image:loc>
+      <image:title>Carrillera de cerdo guisada al vino tinto con puré cremoso</image:title>
+      <image:caption>Carrillera de cerdo guisada al vino tinto — gastrobar Corte de Manga, Eixample Barcelona</image:caption>
+    </image:image>
   </url>
 
 </urlset>

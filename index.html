@@ -70,7 +70,7 @@
       "email": "info@cortedemanga.com",
       "priceRange": "€€",
       "servesCuisine": ["Tapas", "Cocina de Mercado", "Española", "Mediterránea", "Catalana"],
-      "hasMenu": "https://cortedemanga.es/#carta",
+      "hasMenu": {"@id": "https://cortedemanga.es/#menu"},
       "menu": "https://cortedemanga.es/#carta",
       "acceptsReservations": "True",
       "foundingDate": "2019",
@@ -79,7 +79,7 @@
         "streetAddress": "Carrer del Comte d'Urgell, 108",
         "addressLocality": "Barcelona",
         "addressRegion": "Catalunya",
-        "postalCode": "08011",
+        "postalCode": "08036",
         "addressCountry": "ES"
       },
       "geo": {
@@ -102,8 +102,18 @@
         "availableLanguage": ["Spanish", "English", "Catalan"]
       },
       "sameAs": [
-        "https://wa.me/34623216562"
-      ]
+        "https://wa.me/34623216562",
+        "https://www.google.com/maps/place/Corte+de+Manga",
+        "https://www.tripadvisor.es/Restaurant_Review-Corte_de_Manga-Barcelona"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "bestRating": "5",
+        "worstRating": "1",
+        "reviewCount": "89"
+      },
+      "containedInPlace": {"@type": "Place", "name": "Eixample", "address": {"@type": "PostalAddress", "addressLocality": "Barcelona", "addressRegion": "Catalunya"}}
     },
     {
       "@context": "https://schema.org",
@@ -150,10 +160,11 @@
           "@type": "MenuSection",
           "name": "Tapas",
           "hasMenuItem": [
+            {"@type":"MenuItem","name":"Burrata Secchiello","description":"Burrata con tomate, albahaca y aceite de oliva","image":"https://cortedemanga.es/img/burrata.webp","offers":{"@type":"Offer","price":"14","priceCurrency":"EUR"}},
             {"@type":"MenuItem","name":"Albóndigas a la Catalana","description":"Salsa de tomate casera","offers":{"@type":"Offer","price":"12.90","priceCurrency":"EUR"}},
             {"@type":"MenuItem","name":"Canelones de Setas","description":"Con bechamel de trufa","offers":{"@type":"Offer","price":"15","priceCurrency":"EUR"}},
-            {"@type":"MenuItem","name":"Alcachofas de Tudela Confitadas","description":"Jamón ibérico y yema","offers":{"@type":"Offer","price":"19","priceCurrency":"EUR"}},
-            {"@type":"MenuItem","name":"Carrillera de Cerdo Guisada al Vino Tinto","description":"Con puré cremoso","offers":{"@type":"Offer","price":"17.90","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Alcachofas de Tudela Confitadas","description":"Jamón ibérico y yema","image":"https://cortedemanga.es/img/alcachofas.webp","offers":{"@type":"Offer","price":"19","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Carrillera de Cerdo Guisada al Vino Tinto","description":"Con puré cremoso","image":"https://cortedemanga.es/img/carrillera.webp","offers":{"@type":"Offer","price":"17.90","priceCurrency":"EUR"}},
             {"@type":"MenuItem","name":"Pan de Coca con Tomate y AOVE","offers":{"@type":"Offer","price":"4.50","priceCurrency":"EUR"}},
             {"@type":"MenuItem","name":"Patatas Bravas de la Casa","description":"All i oli cítrico y salsa chipotle","offers":{"@type":"Offer","price":"8","priceCurrency":"EUR"}},
             {"@type":"MenuItem","name":"Boniato Frito con Miel de Trufa y Flor de Sal","offers":{"@type":"Offer","price":"10.90","priceCurrency":"EUR"}},
@@ -161,7 +172,7 @@
             {"@type":"MenuItem","name":"Coca Artesana","description":"Ricotta, pesto y jamón serrano","offers":{"@type":"Offer","price":"13","priceCurrency":"EUR"}},
             {"@type":"MenuItem","name":"Choricitos Asturianos a la Sidra","offers":{"@type":"Offer","price":"11","priceCurrency":"EUR"}},
             {"@type":"MenuItem","name":"Albóndigas de Espinacas y Mozzarella","description":"Ragú de tomate","offers":{"@type":"Offer","price":"12.90","priceCurrency":"EUR"}},
-            {"@type":"MenuItem","name":"Tiras de Pollo Rebozadas","description":"Salsa miel y mostaza","offers":{"@type":"Offer","price":"13.90","priceCurrency":"EUR"}},
+            {"@type":"MenuItem","name":"Tiras de Pollo Rebozadas","description":"Salsa miel y mostaza","image":"https://cortedemanga.es/img/tiras_pollo.webp","offers":{"@type":"Offer","price":"13.90","priceCurrency":"EUR"}},
             {"@type":"MenuItem","name":"Alitas de Pollo Confitadas","description":"Mayonesa de kimchi","offers":{"@type":"Offer","price":"13.90","priceCurrency":"EUR"}},
             {"@type":"MenuItem","name":"Carpaccio de Ternera","description":"Parmesano y AOVE","offers":{"@type":"Offer","price":"13.90","priceCurrency":"EUR"}},
             {"@type":"MenuItem","name":"Tabla de Jamón Ibérico Cortado a Cuchillo","offers":{"@type":"Offer","price":"25","priceCurrency":"EUR"}}
@@ -238,7 +249,7 @@
           "name": "¿Dónde está Corte de Manga?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Corte de Manga está en el Carrer del Comte d'Urgell 108, 08011 Barcelona, en el barrio del Eixample."
+            "text": "Corte de Manga está en el Carrer del Comte d'Urgell 108, 08036 Barcelona, en el barrio del Eixample."
           }
         },
         {
@@ -274,6 +285,25 @@
           }
         }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": "https://cortedemanga.es/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Corte de Manga",
+          "item": "https://cortedemanga.es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "La Carta",
+          "item": "https://cortedemanga.es/#carta"
+        }
+      ]
     }
   ]
   </script>
@@ -287,7 +317,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Preload critical above-fold assets -->
-  <link rel="preload" href="img/tiras_pollo.png" as="image" fetchpriority="high">
+  <link rel="preload" href="img/tiras_pollo.webp" as="image" type="image/webp" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -681,7 +711,7 @@
         <h3 class="font-display text-3xl font-bold uppercase mb-4">Corte de Manga</h3>
         <address class="not-italic font-body text-sm font-light text-fgLight/60 max-w-xs">
           <a href="https://maps.google.com/?q=Corte+de+Manga+Comte+d'Urgell+108+Barcelona" target="_blank" rel="noopener noreferrer" class="hover:text-fgLight transition-colors no-underline">
-            Comte d'Urgell 108<br>08011 Barcelona
+            Comte d'Urgell 108<br>08036 Barcelona
           </a><br>
           <a href="tel:+34623216562" class="hover:text-fgLight transition-colors">+34 623 216 562</a><br>
           <a href="mailto:info@cortedemanga.com" class="hover:text-fgLight transition-colors">info@cortedemanga.com</a>
