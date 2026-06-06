@@ -513,11 +513,11 @@
 
     /* ── Hero slideshow crossfade ── */
     @keyframes heroFade {
-      0%    { opacity: 0; }
-      5%    { opacity: 1; }
-      25%   { opacity: 1; }
-      30%   { opacity: 0; }
-      100%  { opacity: 0; }
+      0%      { opacity: 0; }
+      3.33%   { opacity: 1; }
+      13.33%  { opacity: 1; }
+      16.66%  { opacity: 0; }
+      100%    { opacity: 0; }
     }
     .hero-slide {
       position: absolute;
@@ -528,10 +528,13 @@
       animation: heroFade 20s infinite;
       animation-fill-mode: backwards;
     }
+    .hero-slide { animation-duration: 30s; }
     .hero-slide:nth-child(1) { animation-delay: 0s; }
     .hero-slide:nth-child(2) { animation-delay: 5s; }
     .hero-slide:nth-child(3) { animation-delay: 10s; }
     .hero-slide:nth-child(4) { animation-delay: 15s; }
+    .hero-slide:nth-child(5) { animation-delay: 20s; }
+    .hero-slide:nth-child(6) { animation-delay: 25s; }
     @media (prefers-reduced-motion: reduce) {
       .hero-slide { animation: none; }
       .hero-slide:nth-child(1) { opacity: 1; }
@@ -603,11 +606,12 @@
     
     <!-- Hero Section -->
     <section class="min-h-screen flex flex-col justify-center px-6 md:px-12 py-20 relative border-b-grid overflow-hidden">
-      <!-- Slideshow: food photos now, add ambiente-*.webp when uploaded -->
+      <div class="hero-slide" style="background-image:url('img/ambiente-terraza.webp');background-position:center 40%;"></div>
       <div class="hero-slide" style="background-image:url('img/burrata.webp');background-position:center 60%;"></div>
+      <div class="hero-slide" style="background-image:url('img/ambiente-interior.webp');background-position:center 40%;"></div>
       <div class="hero-slide" style="background-image:url('img/carrillera.webp');"></div>
-      <div class="hero-slide" style="background-image:url('img/alcachofas.webp');"></div>
-      <div class="hero-slide" style="background-image:url('img/tiras_pollo.webp');"></div>
+      <div class="hero-slide" style="background-image:url('img/ambiente-barra.webp');background-position:center 30%;"></div>
+      <div class="hero-slide" style="background-image:url('img/ambiente-mesas.webp');background-position:center 35%;"></div>
       <div style="position:absolute;inset:0;background:rgba(5,5,5,0.62);z-index:1;"></div>
       <!-- Desktop Fixed Reservar Mesa -->
       <div class="hidden md:block fixed top-10 right-10 z-[100]">
