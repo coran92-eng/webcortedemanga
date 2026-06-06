@@ -493,6 +493,49 @@
       color: #B12A2A; 
       padding-left: 2.5rem;
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee span { animation: none; padding-left: 1rem; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .image-mono { transition: none; }
+      .btn-sharp::before { transition: none; }
+    }
+
+    /* ── Accesibilidad: foco visible por teclado ── */
+    .btn-sharp:focus-visible,
+    .lang-btn:focus-visible { outline: 2px solid rgba(235,235,235,0.55); outline-offset: 2px; }
+    details summary:focus-visible { outline: 2px solid rgba(235,235,235,0.55); outline-offset: 4px; }
+    .mobile-menu-link:focus-visible { outline: 2px solid rgba(177,42,42,0.8); outline-offset: 2px; }
+    /* Texto mínimo 12px — etiquetas editoriales de 10px subidas a 12px */
+    .text-\[10px\] { font-size: 0.75rem; }
+    /* Utilidad sr-only */
+    .sr-only { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0; }
+
+    /* ── Hero slideshow crossfade ── */
+    @keyframes heroFade {
+      0%    { opacity: 0; }
+      5%    { opacity: 1; }
+      25%   { opacity: 1; }
+      30%   { opacity: 0; }
+      100%  { opacity: 0; }
+    }
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      animation: heroFade 20s infinite;
+      animation-fill-mode: backwards;
+    }
+    .hero-slide:nth-child(1) { animation-delay: 0s; }
+    .hero-slide:nth-child(2) { animation-delay: 5s; }
+    .hero-slide:nth-child(3) { animation-delay: 10s; }
+    .hero-slide:nth-child(4) { animation-delay: 15s; }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-slide { animation: none; }
+      .hero-slide:nth-child(1) { opacity: 1; }
+    }
   </style>
 </head>
 <body>
@@ -559,10 +602,16 @@
   <main class="col-span-2">
     
     <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col justify-center px-6 md:px-12 py-20 relative border-b-grid">
+    <section class="min-h-screen flex flex-col justify-center px-6 md:px-12 py-20 relative border-b-grid overflow-hidden">
+      <!-- Slideshow: food photos now, add ambiente-*.webp when uploaded -->
+      <div class="hero-slide" style="background-image:url('img/burrata.webp');background-position:center 60%;"></div>
+      <div class="hero-slide" style="background-image:url('img/carrillera.webp');"></div>
+      <div class="hero-slide" style="background-image:url('img/alcachofas.webp');"></div>
+      <div class="hero-slide" style="background-image:url('img/tiras_pollo.webp');"></div>
+      <div style="position:absolute;inset:0;background:rgba(5,5,5,0.62);z-index:1;"></div>
       <!-- Desktop Fixed Reservar Mesa -->
       <div class="hidden md:block fixed top-10 right-10 z-[100]">
-        <button onclick="openReservationModal()" class="btn-sharp border border-fgLight px-8 py-4 font-body text-xs uppercase tracking-widest font-bold text-bgDark bg-fgLight cursor-pointer hover:bg-bgDark hover:text-fgLight transition-colors" data-i18n="btn_reservar">
+        <button onclick="gtag('event','conversion',{'send_to':'AW-18213186788/ZVVDCKDA07kcEOTZ3OxD'}); openReservationModal()" class="btn-sharp border border-fgLight px-8 py-4 font-body text-xs uppercase tracking-widest font-bold text-bgDark bg-fgLight cursor-pointer hover:bg-bgDark hover:text-fgLight transition-colors" data-i18n="btn_reservar">
           Reservar Mesa
         </button>
       </div>
@@ -581,7 +630,7 @@
           Cocina de verdad, hecha con las manos y a fuego lento. Recetas de toda la vida, producto de mercado y mucho mimo en cada plato. Aquí vienes a disfrutar.
         </p>
         <div class="flex items-end md:justify-end">
-          <button onclick="openReservationModal()" class="btn-sharp border border-fgLight px-8 py-4 font-body text-xs uppercase tracking-widest font-bold text-fgLight cursor-pointer hover:bg-fgLight hover:text-bgDark transition-colors" data-i18n="btn_reservar">
+          <button onclick="gtag('event','conversion',{'send_to':'AW-18213186788/ZVVDCKDA07kcEOTZ3OxD'}); openReservationModal()" class="btn-sharp border border-fgLight px-8 py-4 font-body text-xs uppercase tracking-widest font-bold text-fgLight cursor-pointer hover:bg-fgLight hover:text-bgDark transition-colors" data-i18n="btn_reservar">
             Reservar Mesa
           </button>
         </div>
