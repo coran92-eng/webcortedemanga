@@ -31,9 +31,36 @@ const DICT = {
     carta_subtitle: "Tapas artesanales y cocina de mercado en el Eixample, Barcelona",
 
     /* Teaser grupos (index) */
+    grupos_teaser_label: "Menús de grupo",
     grupos_teaser_titulo: "¿Venís en grupo?",
     grupos_teaser_desc: "Tenemos menús cerrados desde 32€ por persona, para grupos de 4 a 15 personas. Entrantes para compartir, segundo y postre a elegir.",
     grupos_teaser_cta: "Ver menús de grupo →",
+
+    /* Carta — encabezados de sección */
+    carta_aperitivos: "Aperitivos",
+    carta_tapas: "Tapas",
+    carta_tortillas: "Nuestras Tortillas",
+    carta_croquetas: "Croquetas Artesanales",
+    carta_latas: "Latas",
+    carta_postres: "Postres",
+
+    /* FAQ */
+    faq_titulo: "Preguntas frecuentes",
+    faq1_q: "¿Dónde está Corte de Manga?",
+    faq1_a: "Corte de Manga está en el <strong>Carrer del Comte d'Urgell 108, en el Eixample de Barcelona</strong>. Cerca del metro Urgell (L1) y Hospital Clínic (L5). Uno de los gastrobares más valorados del Eixample.",
+    faq2_q: "¿Cuál es el horario?",
+    faq2_a: "Abrimos <strong>todos los días de la semana, de lunes a domingo, de 08:00 a 01:00</strong>. Puedes venir a desayunar, comer, merendar o cenar. El gastrobar nunca cierra.",
+    faq3_q: "¿Se puede reservar mesa?",
+    faq3_a: "Sí, <strong>aceptamos reservas</strong>. Puedes hacerlo directamente desde nuestra web pulsando \"Reservar Mesa\", o llamando al <a href=\"tel:+34623216562\" class=\"hover:text-accent transition-colors\">+34 623 216 562</a>. Recomendamos reservar especialmente para cenas de fin de semana.",
+    faq4_q: "¿Qué tipo de cocina ofrecéis?",
+    faq4_a: "Somos un <strong>gastrobar de tapas en Barcelona</strong> especializado en cocina de mercado española y mediterránea. Nuestra carta incluye <strong>tapas artesanales, tortillas caseras, croquetas</strong>, conservas premium y cócteles de autor. Todo hecho con producto fresco y técnica.",
+    faq5_q: "¿Cómo contactar con Corte de Manga?",
+    faq5_a: "Puedes contactarnos por teléfono o WhatsApp en el <a href=\"tel:+34623216562\" class=\"hover:text-accent transition-colors\">+34 623 216 562</a>, o por email en <a href=\"mailto:info@cortedemanga.com\" class=\"hover:text-accent transition-colors\">info@cortedemanga.com</a>. También puedes escribirnos por WhatsApp pulsando el botón flotante de la web.",
+
+    /* Cómo llegar */
+    como_llegar_titulo: "Cómo llegar",
+    como_llegar_desc: "Nos encontramos en el corazón del <strong>Eixample de Barcelona</strong>, en el barrio de la <strong>Esquerra de l'Eixample</strong>. Si buscas un <strong>bar de tapas en Barcelona</strong> con cocina de mercado y ambiente de gastrobar, estamos a solo unos minutos andando desde varios puntos del centro.",
+    como_llegar_horario: "🕐 Abierto todos los días: 08:00 – 01:00",
 
     /* Footer */
     footer_tagline: "Gastrobar · Bar de Tapas · Eixample Barcelona",
@@ -133,9 +160,36 @@ const DICT = {
     carta_subtitle: "Artisan tapas and market cuisine in the Eixample, Barcelona",
 
     /* Groups teaser (index) */
+    grupos_teaser_label: "Group menus",
     grupos_teaser_titulo: "Coming as a group?",
     grupos_teaser_desc: "We have set menus from €32 per person, for groups of 4 to 15. Sharing starters, a main and dessert of your choice.",
     grupos_teaser_cta: "See group menus →",
+
+    /* Menu — section headers */
+    carta_aperitivos: "Starters",
+    carta_tapas: "Tapas",
+    carta_tortillas: "Our Omelettes",
+    carta_croquetas: "Artisan Croquettes",
+    carta_latas: "Tinned Fish",
+    carta_postres: "Desserts",
+
+    /* FAQ */
+    faq_titulo: "Frequently asked questions",
+    faq1_q: "Where is Corte de Manga?",
+    faq1_a: "Corte de Manga is at <strong>Carrer del Comte d'Urgell 108, in the Eixample neighbourhood of Barcelona</strong>. Close to Urgell metro (L1) and Hospital Clínic (L5). One of the most highly rated gastrobars in the Eixample.",
+    faq2_q: "What are the opening hours?",
+    faq2_a: "We are open <strong>every day of the week, Monday to Sunday, from 08:00 to 01:00</strong>. You can come for breakfast, lunch, a snack or dinner. The gastrobar never closes.",
+    faq3_q: "Can I book a table?",
+    faq3_a: "Yes, <strong>we accept reservations</strong>. You can book directly from our website by clicking \"Book a Table\", or by calling <a href=\"tel:+34623216562\" class=\"hover:text-accent transition-colors\">+34 623 216 562</a>. We especially recommend booking for weekend dinners.",
+    faq4_q: "What type of food do you serve?",
+    faq4_a: "We are a <strong>tapas gastrobar in Barcelona</strong> specialising in Spanish and Mediterranean market cuisine. Our menu includes <strong>artisan tapas, homemade omelettes, croquettes</strong>, premium tinned fish and signature cocktails. Everything made with fresh ingredients and care.",
+    faq5_q: "How can I contact Corte de Manga?",
+    faq5_a: "You can reach us by phone or WhatsApp at <a href=\"tel:+34623216562\" class=\"hover:text-accent transition-colors\">+34 623 216 562</a>, or by email at <a href=\"mailto:info@cortedemanga.com\" class=\"hover:text-accent transition-colors\">info@cortedemanga.com</a>. You can also message us on WhatsApp using the floating button on the website.",
+
+    /* How to get here */
+    como_llegar_titulo: "How to get here",
+    como_llegar_desc: "We are in the heart of the <strong>Eixample neighbourhood of Barcelona</strong>, in the <strong>Esquerra de l'Eixample</strong> area. If you are looking for a <strong>tapas bar in Barcelona</strong> with market cuisine and a gastrobar atmosphere, we are just a few minutes' walk from several central points.",
+    como_llegar_horario: "🕐 Open every day: 08:00 – 01:00",
 
     /* Footer */
     footer_tagline: "Gastrobar · Tapas Bar · Eixample Barcelona",
@@ -235,9 +289,36 @@ const DICT = {
     carta_subtitle: "Tapes artesanals i cuina de mercat a l'Eixample, Barcelona",
 
     /* Teaser grups (index) */
+    grupos_teaser_label: "Menús de grup",
     grupos_teaser_titulo: "Veniu en grup?",
     grupos_teaser_desc: "Tenim menús tancats des de 32€ per persona, per a grups de 4 a 15 persones. Entrants per compartir, segon i postres a escollir.",
     grupos_teaser_cta: "Veure menús de grup →",
+
+    /* Carta — encapçalaments de secció */
+    carta_aperitivos: "Aperitius",
+    carta_tapas: "Tapes",
+    carta_tortillas: "Les Nostres Truites",
+    carta_croquetas: "Croquetes Artesanals",
+    carta_latas: "Llaunes",
+    carta_postres: "Postres",
+
+    /* FAQ */
+    faq_titulo: "Preguntes freqüents",
+    faq1_q: "On és Corte de Manga?",
+    faq1_a: "Corte de Manga és al <strong>Carrer del Comte d'Urgell 108, a l'Eixample de Barcelona</strong>. A prop del metro Urgell (L1) i Hospital Clínic (L5). Un dels gastrobars més valorats de l'Eixample.",
+    faq2_q: "Quin és l'horari?",
+    faq2_a: "Obrim <strong>tots els dies de la setmana, de dilluns a diumenge, de 08:00 a 01:00</strong>. Pots venir a esmorzar, dinar, berenar o sopar. El gastrobar mai tanca.",
+    faq3_q: "Es pot reservar taula?",
+    faq3_a: "Sí, <strong>acceptem reserves</strong>. Pots fer-ho directament des de la nostra web fent clic a \"Reservar Taula\", o trucant al <a href=\"tel:+34623216562\" class=\"hover:text-accent transition-colors\">+34 623 216 562</a>. Recomanem reservar especialment per als sopars de cap de setmana.",
+    faq4_q: "Quin tipus de cuina oferiu?",
+    faq4_a: "Som un <strong>gastrobar de tapes a Barcelona</strong> especialitzat en cuina de mercat espanyola i mediterrània. La nostra carta inclou <strong>tapes artesanals, truites casolanes, croquetes</strong>, conserves premium i còctels d'autor. Tot fet amb producte fresc i tècnica.",
+    faq5_q: "Com contactar amb Corte de Manga?",
+    faq5_a: "Pots contactar-nos per telèfon o WhatsApp al <a href=\"tel:+34623216562\" class=\"hover:text-accent transition-colors\">+34 623 216 562</a>, o per correu a <a href=\"mailto:info@cortedemanga.com\" class=\"hover:text-accent transition-colors\">info@cortedemanga.com</a>. També pots escriure'ns per WhatsApp fent clic al botó flotant de la web.",
+
+    /* Com arribar-hi */
+    como_llegar_titulo: "Com arribar-hi",
+    como_llegar_desc: "Som al cor de l'<strong>Eixample de Barcelona</strong>, al barri de l'<strong>Esquerra de l'Eixample</strong>. Si busques un <strong>bar de tapes a Barcelona</strong> amb cuina de mercat i ambient de gastrobar, som a només uns minuts caminant des de diversos punts del centre.",
+    como_llegar_horario: "🕐 Obert tots els dies: 08:00 – 01:00",
 
     /* Footer */
     footer_tagline: "Gastrobar · Bar de Tapes · Eixample Barcelona",
