@@ -558,6 +558,7 @@
       background-size: cover;
       background-position: center top;
       display: none;
+      filter: saturate(1.3) brightness(1.05);
     }
     @media (max-width: 767px) {
       .hero-mobile-bg { display: block; }
@@ -580,6 +581,7 @@
       opacity: 0;
       animation: heroFade 30s infinite;
       animation-fill-mode: backwards;
+      filter: saturate(1.25) brightness(1.05);
     }
     .hero-slide:nth-child(1) { animation-delay: 0s; }
     .hero-slide:nth-child(2) { animation-delay: 5s; }
@@ -667,7 +669,7 @@
       <div class="hero-slide" style="background-image:url('img/carrillera.webp');"></div>
       <div class="hero-slide" style="background-image:url('img/ambiente-barra.webp');background-position:center 30%;"></div>
       <div class="hero-slide" style="background-image:url('img/ambiente-mesas.webp');background-position:center 35%;"></div>
-      <div style="position:absolute;inset:0;background:rgba(5,5,5,0.62);"></div>
+      <div style="position:absolute;inset:0;background:rgba(5,5,5,0.48);"></div>
       <!-- Desktop Fixed Reservar Mesa -->
       <div class="hidden md:block fixed top-10 right-10 z-[100]">
         <button type="button" onclick="gtag('event', 'conversion', {'send_to': 'AW-18213186788/ZVVDCKDA07kcEOTZ3OxD'}); openReservationModal()" aria-label="Abrir formulario de reserva" class="btn-sharp border border-fgLight px-8 py-4 font-body text-xs uppercase tracking-widest font-bold text-bgDark bg-fgLight cursor-pointer hover:bg-bgDark hover:text-fgLight transition-colors" data-i18n="btn_reservar">
