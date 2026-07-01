@@ -13,6 +13,11 @@ const DICT = {
     hero_title1: "Corte",
     hero_title2: "De Manga",
     hero_desc: "Cocina de verdad, hecha con las manos y a fuego lento. Recetas de toda la vida, producto de mercado y mucho mimo en cada plato. Aquí vienes a disfrutar.",
+    hero_rating: "+550 reseñas en Google",
+    hero_trust: "Abierto todos los días 08:00–01:00 · Metro Urgell",
+    reserva_cargando: "Cargando reservas…",
+    reserva_alt_texto: "¿Problemas con el formulario? Reserva directamente:",
+    reserva_alt_llamar: "Llamar",
     marquee: "Gastrobar Premium • Producto de Mercado • Recetas de Siempre • Gastrobar Premium • Producto de Mercado • Recetas de Siempre • ",
 
     /* Sección concepto */
@@ -90,6 +95,7 @@ const DICT = {
     grupos_calc_total: "total estimado",
     grupos_calc_min_taula: "Mín. 8 personas para este menú",
     grupos_ver_platos: "Ver menú completo",
+    grupos_reservar_menu: "Reservar este menú →",
     grupos_compartir: "Para compartir",
     grupos_segundo: "Segundo a elegir",
     grupos_postre: "Postre a elegir",
@@ -142,6 +148,11 @@ const DICT = {
     hero_title1: "Corte",
     hero_title2: "De Manga",
     hero_desc: "Real food, made by hand and slow-cooked. Lifelong recipes, fresh market produce, and care in every dish. You come here to enjoy.",
+    hero_rating: "+550 Google reviews",
+    hero_trust: "Open every day 08:00–01:00 · Urgell metro",
+    reserva_cargando: "Loading reservations…",
+    reserva_alt_texto: "Trouble with the form? Book directly:",
+    reserva_alt_llamar: "Call",
     marquee: "Premium Gastrobar • Market Produce • Classic Recipes • Premium Gastrobar • Market Produce • Classic Recipes • ",
 
     /* Concept section */
@@ -219,6 +230,7 @@ const DICT = {
     grupos_calc_total: "estimated total",
     grupos_calc_min_taula: "Min. 8 people for this menu",
     grupos_ver_platos: "See full menu",
+    grupos_reservar_menu: "Book this menu →",
     grupos_compartir: "To share",
     grupos_segundo: "Main of your choice",
     grupos_postre: "Dessert of your choice",
@@ -271,6 +283,11 @@ const DICT = {
     hero_title1: "Corte",
     hero_title2: "De Manga",
     hero_desc: "Cuina de veritat, feta amb les mans i a foc lent. Receptes de tota la vida, producte de mercat i molt de mim en cada plat. Aquí vens a gaudir.",
+    hero_rating: "+550 ressenyes a Google",
+    hero_trust: "Obert tots els dies 08:00–01:00 · Metro Urgell",
+    reserva_cargando: "Carregant reserves…",
+    reserva_alt_texto: "Problemes amb el formulari? Reserva directament:",
+    reserva_alt_llamar: "Trucar",
     marquee: "Gastrobar Premium • Producte de Mercat • Receptes de Sempre • Gastrobar Premium • Producte de Mercat • Receptes de Sempre • ",
 
     /* Secció concepte */
@@ -348,6 +365,7 @@ const DICT = {
     grupos_calc_total: "total estimat",
     grupos_calc_min_taula: "Mín. 8 persones per a aquest menú",
     grupos_ver_platos: "Veure menú complet",
+    grupos_reservar_menu: "Reservar aquest menú →",
     grupos_compartir: "Per compartir",
     grupos_segundo: "Segon a escollir",
     grupos_postre: "Postres a escollir",

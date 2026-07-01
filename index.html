@@ -566,6 +566,7 @@
     }
 
     /* ── Hero slideshow crossfade ── */
+    @keyframes cmSpin { to { transform: rotate(360deg); } }
     @keyframes heroFade {
       0%      { opacity: 0; }
       3.33%   { opacity: 1; }
@@ -610,7 +611,7 @@
     <a href="#carta" class="mobile-menu-link close-on-click" data-i18n="nav_carta">Carta</a>
     <a href="#experiencia" class="mobile-menu-link close-on-click" data-i18n="nav_concepto">Concepto</a>
     <a href="/grupos" class="mobile-menu-link" data-i18n="nav_grupos">Grupos</a>
-    <button type="button" onclick="openReservationModal()" aria-label="Abrir formulario de reserva" class="mobile-menu-link text-left" data-i18n="nav_reservar">Reservar</button>
+    <button type="button" onclick="trackReserva('menu_movil'); openReservationModal()" aria-label="Abrir formulario de reserva" class="mobile-menu-link text-left" data-i18n="nav_reservar">Reservar</button>
   </nav>
 </div>
 
@@ -621,12 +622,33 @@
     <button type="button" onclick="closeReservationModal()" aria-label="Cerrar modal de reservas" class="font-body text-xs uppercase tracking-widest cursor-pointer hover:text-accent transition-colors" data-i18n="close_btn">Cerrar [X]</button>
   </div>
   <div class="flex-grow min-h-0 w-full max-w-4xl mx-auto overflow-y-auto p-4 md:p-8">
-    <iframe
-      id="reservaIframe"
-      src=""
-      title="Sistema de reservas"
-      style="width:100%; min-height:700px; border:none; display:block; overflow:hidden;"
-    ></iframe>
+    <div class="relative">
+      <!-- Loader visible mientras el iframe carga -->
+      <div id="reservaLoader" class="absolute inset-0 flex flex-col items-center justify-center gap-4 pointer-events-none" style="min-height:300px;">
+        <div style="width:36px;height:36px;border:2px solid #333;border-top-color:#f5f5f0;border-radius:50%;animation:cmSpin 0.8s linear infinite;"></div>
+        <p class="font-body text-xs uppercase tracking-widest text-fgLight/50 m-0" data-i18n="reserva_cargando">Cargando reservas…</p>
+      </div>
+      <iframe
+        id="reservaIframe"
+        src=""
+        title="Sistema de reservas"
+        onload="var l=document.getElementById('reservaLoader'); if(l && this.src) l.style.display='none';"
+        style="width:100%; min-height:700px; border:none; display:block; overflow:hidden; position:relative; z-index:1; background:transparent;"
+      ></iframe>
+    </div>
+    <!-- Alternativas de reserva: siempre visibles por si el formulario no carga -->
+    <div class="border-t border-[#333333] mt-6 pt-6 pb-4 text-center">
+      <p class="font-body text-xs uppercase tracking-widest text-fgLight/50 mb-4" data-i18n="reserva_alt_texto">¿Problemas con el formulario? Reserva directamente:</p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+        <a href="https://wa.me/34623216562?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa" onclick="trackReserva('modal_whatsapp')" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 font-body text-xs uppercase tracking-widest font-bold no-underline transition-colors" style="background:#25D366;color:#050505;">
+          <svg aria-hidden="true" class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <a href="tel:+34623216562" onclick="trackReserva('modal_llamar')" class="inline-flex items-center gap-2 px-6 py-3 font-body text-xs uppercase tracking-widest font-bold no-underline border border-fgLight text-fgLight hover:bg-fgLight hover:text-bgDark transition-colors">
+          <span data-i18n="reserva_alt_llamar">Llamar</span>&nbsp;+34 623 216 562
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -640,7 +662,7 @@
       <a href="#carta" class="hover:text-accent transition-colors" data-i18n="nav_carta">Carta</a>
       <a href="#experiencia" class="hover:text-accent transition-colors" data-i18n="nav_concepto">Concepto</a>
       <a href="/grupos" class="hover:text-accent transition-colors" data-i18n="nav_grupos">Grupos</a>
-      <button type="button" onclick="openReservationModal()" aria-label="Abrir formulario de reserva" class="hover:text-accent transition-colors uppercase tracking-[0.2em]" data-i18n="nav_reservar">Reservar</button>
+      <button type="button" onclick="trackReserva('sidebar'); openReservationModal()" aria-label="Abrir formulario de reserva" class="hover:text-accent transition-colors uppercase tracking-[0.2em]" data-i18n="nav_reservar">Reservar</button>
     </nav>
     <div class="text-[10px] tracking-widest text-grid vertical-text">
       EST. 2019
@@ -650,7 +672,7 @@
   <div class="md:hidden flex justify-between items-center px-5 border-b-grid h-[60px] sticky top-0 bg-bgDark z-[50]">
     <div class="font-display font-bold text-xl">C.M.</div>
     <div class="flex items-center gap-5">
-      <button type="button" onclick="openReservationModal()" aria-label="Abrir formulario de reserva" class="font-body text-[10px] md:text-xs uppercase tracking-widest border border-fgLight px-3 py-2 hover:bg-fgLight hover:text-bgDark transition-colors no-underline text-fgLight focus:outline-none" data-i18n="btn_reservar">Reservar Mesa</button>
+      <button type="button" onclick="trackReserva('topbar_movil'); openReservationModal()" aria-label="Abrir formulario de reserva" class="font-body text-[10px] md:text-xs uppercase tracking-widest border border-fgLight px-3 py-2 hover:bg-fgLight hover:text-bgDark transition-colors no-underline text-fgLight focus:outline-none" data-i18n="btn_reservar">Reservar Mesa</button>
       <button type="button" id="openMenuBtn" aria-label="Abrir menú de navegación" class="font-body text-xs uppercase tracking-widest cursor-pointer hover:text-accent transition-colors" data-i18n="btn_menu">Menú</button>
     </div>
   </div>
@@ -672,7 +694,7 @@
       <div style="position:absolute;inset:0;background:rgba(5,5,5,0.48);"></div>
       <!-- Desktop Fixed Reservar Mesa -->
       <div class="hidden md:block fixed top-10 right-10 z-[100]">
-        <button type="button" onclick="gtag('event', 'conversion', {'send_to': 'AW-18213186788/ZVVDCKDA07kcEOTZ3OxD'}); openReservationModal()" aria-label="Abrir formulario de reserva" class="btn-sharp border border-fgLight px-8 py-4 font-body text-xs uppercase tracking-widest font-bold text-bgDark bg-fgLight cursor-pointer hover:bg-bgDark hover:text-fgLight transition-colors" data-i18n="btn_reservar">
+        <button type="button" onclick="trackReserva('hero_fijo'); openReservationModal()" aria-label="Abrir formulario de reserva" class="btn-sharp border border-fgLight px-8 py-4 font-body text-xs uppercase tracking-widest font-bold text-bgDark bg-fgLight cursor-pointer hover:bg-bgDark hover:text-fgLight transition-colors" data-i18n="btn_reservar">
           Reservar Mesa
         </button>
       </div>
@@ -687,10 +709,12 @@
         <p class="font-body text-lg md:text-xl font-light leading-relaxed max-w-md" data-i18n="hero_desc">
           Gastrobar de tapas en el Eixample de Barcelona. Cocina de verdad, hecha con las manos y a fuego lento. Recetas de toda la vida, producto de mercado y mucho mimo en cada plato. Aquí vienes a disfrutar, en Comte d'Urgell 108.
         </p>
-        <div class="flex items-end md:justify-end">
-          <button type="button" onclick="gtag('event', 'conversion', {'send_to': 'AW-18213186788/ZVVDCKDA07kcEOTZ3OxD'}); openReservationModal()" aria-label="Abrir formulario de reserva" class="btn-sharp border border-fgLight px-8 py-4 font-body text-xs uppercase tracking-widest font-bold text-fgLight cursor-pointer hover:bg-fgLight hover:text-bgDark transition-colors" data-i18n="btn_reservar">
+        <div class="flex flex-col items-start md:items-end justify-end gap-3">
+          <button type="button" onclick="trackReserva('hero'); openReservationModal()" aria-label="Abrir formulario de reserva" class="btn-sharp border border-fgLight px-8 py-4 font-body text-xs uppercase tracking-widest font-bold text-fgLight cursor-pointer hover:bg-fgLight hover:text-bgDark transition-colors" data-i18n="btn_reservar">
             Reservar Mesa
           </button>
+          <p class="font-body text-xs tracking-wider text-fgLight/80 m-0"><span class="text-accent">★</span> 4,6 · <span data-i18n="hero_rating">+550 reseñas en Google</span></p>
+          <p class="font-body text-[10px] uppercase tracking-widest text-fgLight/50 m-0" data-i18n="hero_trust">Abierto todos los días 08:00–01:00 · Metro Urgell</p>
         </div>
       </div>
     </section>
@@ -1136,6 +1160,14 @@
     }
   });
 
+  // Tracking centralizado de conversión (Google Ads + evento GA4 con etiqueta del CTA)
+  function trackReserva(label) {
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {'send_to': 'AW-18213186788/ZVVDCKDA07kcEOTZ3OxD'});
+      gtag('event', 'reserva_click', {'cta': label});
+    }
+  }
+
   // Modal de Reservas
   function openReservationModal() {
     preloadReservaIframe(); // garantía: si aún no cargó, carga ahora
@@ -1264,7 +1296,7 @@
 </div>
 
 <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/34623216562" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] bg-bgDark border border-fgLight px-5 py-4 flex items-center gap-3 hover:bg-fgLight hover:text-bgDark transition-colors group cursor-pointer no-underline text-fgLight">
+<a href="https://wa.me/34623216562?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa" onclick="trackReserva('whatsapp_fab')" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] bg-bgDark border border-fgLight px-5 py-4 flex items-center gap-3 hover:bg-fgLight hover:text-bgDark transition-colors group cursor-pointer no-underline text-fgLight">
   <svg aria-hidden="true" class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
   <span class="font-body text-xs uppercase tracking-[0.2em] font-bold">WhatsApp</span>
 </a>
