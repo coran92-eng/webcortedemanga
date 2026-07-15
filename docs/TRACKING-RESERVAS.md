@@ -23,6 +23,10 @@ if (window.parent !== window) {
 La web ya escucha ese mensaje (`index.html`, listener `cmReservaConfirmada`) y dispara la
 conversión de Google Ads + evento GA4 `reserva_conversion`.
 
+Por seguridad, la web solo acepta mensajes de estos orígenes (constante `RESERVA_ORIGINS`
+en `index.html`): `https://aplicaci-n-reservas.vercel.app` y `https://reservas.cortedemanga.es`.
+Si el embed se sirve desde otro dominio en el futuro, hay que añadirlo a esa lista.
+
 Mientras este cambio no esté desplegado en la app de reservas, las únicas conversiones de Ads
 registradas serán las de WhatsApp/llamada — tenerlo en cuenta al leer las campañas.
 

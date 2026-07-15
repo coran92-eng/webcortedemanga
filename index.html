@@ -1213,8 +1213,15 @@
   );
   setTimeout(preloadReservaIframe, 4000);
 
+  // Orígenes de confianza para los postMessage del iframe de reservas
+  const RESERVA_ORIGINS = [
+    'https://aplicaci-n-reservas.vercel.app',
+    'https://reservas.cortedemanga.es',
+  ];
+
   // 3. Auto-resize iframe via postMessage
   window.addEventListener("message", (e) => {
+    if (!RESERVA_ORIGINS.includes(e.origin)) return;
     if (e.data?.type === "cmResize") {
       const iframe = document.getElementById("reservaIframe");
       if (iframe) iframe.style.height = e.data.height + "px";
@@ -1235,8 +1242,9 @@
     }
   }
   // Conversión real: la app de reservas emite postMessage({type:'cmReservaConfirmada'})
-  // al confirmar la reserva (ver README del repo Aplicaci-n-reservas).
+  // al confirmar la reserva (ver docs/TRACKING-RESERVAS.md).
   window.addEventListener('message', (e) => {
+    if (!RESERVA_ORIGINS.includes(e.origin)) return;
     if (e.data?.type === 'cmReservaConfirmada') {
       trackConversionAds('reserva_confirmada');
     }
