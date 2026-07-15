@@ -99,7 +99,7 @@
         "streetAddress": "Carrer del Comte d'Urgell, 108",
         "addressLocality": "Barcelona",
         "addressRegion": "Catalunya",
-        "postalCode": "08015",
+        "postalCode": "08011",
         "addressCountry": "ES"
       },
       "geo": {
@@ -276,7 +276,7 @@
           "name": "¿Dónde está Corte de Manga?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Corte de Manga está en el Carrer del Comte d'Urgell 108, 08015 Barcelona, en el barrio del Eixample."
+            "text": "Corte de Manga está en el Carrer del Comte d'Urgell 108, 08011 Barcelona, en el barrio del Eixample."
           }
         },
         {
@@ -594,6 +594,49 @@
       .hero-slide { animation: none; }
       .hero-slide:nth-child(1) { opacity: 1; }
     }
+
+    /* ── Barra CTA fija inferior (solo móvil, aparece tras pasar el hero) ── */
+    .mobile-cta-bar {
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      z-index: 90;
+      display: none;
+      gap: 0;
+      background: #050505;
+      border-top: 1px solid var(--grid-color);
+      transform: translateY(100%);
+      transition: transform 0.4s cubic-bezier(0.83, 0, 0.17, 1);
+      padding-bottom: env(safe-area-inset-bottom, 0);
+    }
+    @media (max-width: 767px) {
+      .mobile-cta-bar { display: flex; }
+      /* Cuando la barra está visible, subimos los FABs para que no se solapen */
+      body.cta-bar-visible .lang-fab { bottom: 5.5rem; }
+      body.cta-bar-visible .wa-fab { display: none; }
+    }
+    .mobile-cta-bar.visible { transform: translateY(0); }
+    .mobile-cta-bar .cta-main {
+      flex: 1;
+      background: #EBEBEB;
+      color: #050505;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      padding: 1.1rem 1rem;
+      text-align: center;
+      border: none;
+    }
+    .mobile-cta-bar .cta-wa {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      background: #25D366;
+      color: #050505;
+      border-left: 1px solid var(--grid-color);
+    }
   </style>
 </head>
 <body>
@@ -640,11 +683,11 @@
     <div class="border-t border-[#333333] mt-6 pt-6 pb-4 text-center">
       <p class="font-body text-xs uppercase tracking-widest text-fgLight/50 mb-4" data-i18n="reserva_alt_texto">¿Problemas con el formulario? Reserva directamente:</p>
       <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
-        <a href="https://wa.me/34623216562?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa" onclick="trackReserva('modal_whatsapp')" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 font-body text-xs uppercase tracking-widest font-bold no-underline transition-colors" style="background:#25D366;color:#050505;">
+        <a href="https://wa.me/34623216562?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa" onclick="trackConversionAds('modal_whatsapp')" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 font-body text-xs uppercase tracking-widest font-bold no-underline transition-colors" style="background:#25D366;color:#050505;">
           <svg aria-hidden="true" class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
           WhatsApp
         </a>
-        <a href="tel:+34623216562" onclick="trackReserva('modal_llamar')" class="inline-flex items-center gap-2 px-6 py-3 font-body text-xs uppercase tracking-widest font-bold no-underline border border-fgLight text-fgLight hover:bg-fgLight hover:text-bgDark transition-colors">
+        <a href="tel:+34623216562" onclick="trackConversionAds('modal_llamar')" class="inline-flex items-center gap-2 px-6 py-3 font-body text-xs uppercase tracking-widest font-bold no-underline border border-fgLight text-fgLight hover:bg-fgLight hover:text-bgDark transition-colors">
           <span data-i18n="reserva_alt_llamar">Llamar</span>&nbsp;+34 623 216 562
         </a>
       </div>
@@ -681,16 +724,16 @@
   <main class="col-span-2">
     
     <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col justify-center px-6 md:px-12 py-20 relative border-b-grid overflow-hidden">
+    <section id="hero" class="min-h-screen flex flex-col justify-center px-6 md:px-12 py-20 relative border-b-grid overflow-hidden">
       <!-- Móvil: collage estático 2×2 -->
       <div class="hero-mobile-bg"></div>
       <!-- Desktop: slideshow crossfade -->
       <div class="hero-slide" style="background-image:url('img/ambiente-terraza.webp');background-position:center 40%;"></div>
-      <div class="hero-slide" style="background-image:url('img/burrata.webp');background-position:center 60%;"></div>
-      <div class="hero-slide" style="background-image:url('img/ambiente-interior.webp');background-position:center 40%;"></div>
-      <div class="hero-slide" style="background-image:url('img/carrillera.webp');"></div>
-      <div class="hero-slide" style="background-image:url('img/ambiente-barra.webp');background-position:center 30%;"></div>
-      <div class="hero-slide" style="background-image:url('img/ambiente-mesas.webp');background-position:center 35%;"></div>
+      <div class="hero-slide" data-bg="img/burrata.webp" style="background-position:center 60%;"></div>
+      <div class="hero-slide" data-bg="img/ambiente-interior.webp" style="background-position:center 40%;"></div>
+      <div class="hero-slide" data-bg="img/carrillera.webp"></div>
+      <div class="hero-slide" data-bg="img/ambiente-barra.webp" style="background-position:center 30%;"></div>
+      <div class="hero-slide" data-bg="img/ambiente-mesas.webp" style="background-position:center 35%;"></div>
       <div style="position:absolute;inset:0;background:rgba(5,5,5,0.48);"></div>
       <!-- Desktop Fixed Reservar Mesa -->
       <div class="hidden md:block fixed top-10 right-10 z-[100]">
@@ -905,6 +948,12 @@
     <div class="menu-item p-6 md:px-10 border-b border-[#222] flex justify-between items-start"><div><h4 class="font-display text-lg uppercase font-bold mb-1">Paloma</h4><p class="font-body text-xs text-fgLight/60">Tequila Patrón, zumo de lima y refresco de pomelo</p></div><div class="font-display text-lg font-bold ml-4">12€</div></div>
   </div>
       </div>
+
+      <!-- CTA post-carta -->
+      <div class="p-8 md:p-12 text-center border-b-grid">
+        <p class="font-body text-sm text-fgLight/60 mb-6" data-i18n="carta_cta_texto">¿Te ha abierto el apetito? Guárdate una mesa antes de que vuelen.</p>
+        <button type="button" onclick="trackReserva('carta'); openReservationModal()" aria-label="Abrir formulario de reserva" class="btn-sharp border border-fgLight px-8 py-4 font-body text-xs uppercase tracking-widest font-bold text-fgLight cursor-pointer hover:bg-fgLight hover:text-bgDark transition-colors" data-i18n="btn_reservar">Reservar Mesa</button>
+      </div>
     </section>
 
     <!-- Teaser Grupos -->
@@ -1017,6 +1066,18 @@
       </div>
     </section>
 
+    <!-- CTA final -->
+    <section class="border-b-grid p-8 md:p-16 py-20 text-center flex flex-col items-center gap-6" id="reservar">
+      <h2 class="font-display text-4xl md:text-7xl font-bold uppercase leading-none" data-i18n="cta_final_titulo">Reserva<br>tu mesa</h2>
+      <p class="font-body text-sm md:text-base font-light text-fgLight/70 max-w-md leading-relaxed" data-i18n="cta_final_desc">Cocina de mercado, tapas artesanales y cócteles de autor en el Eixample. Reserva en menos de un minuto.</p>
+      <div class="flex flex-col sm:flex-row gap-3 items-center justify-center">
+        <button type="button" onclick="trackReserva('cta_final'); openReservationModal()" aria-label="Abrir formulario de reserva" class="btn-sharp border border-fgLight px-10 py-4 font-body text-xs uppercase tracking-widest font-bold text-bgDark bg-fgLight cursor-pointer hover:bg-bgDark hover:text-fgLight transition-colors" data-i18n="btn_reservar">Reservar Mesa</button>
+        <a href="https://wa.me/34623216562?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa" onclick="trackConversionAds('cta_final_whatsapp')" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-fgLight px-10 py-4 font-body text-xs uppercase tracking-widest font-bold text-fgLight no-underline hover:bg-fgLight hover:text-bgDark transition-colors">WhatsApp</a>
+      </div>
+      <p class="font-body text-xs tracking-wider text-fgLight/60 m-0"><span class="text-accent">★</span> 4,6 · <span data-i18n="hero_rating">+550 reseñas en Google</span></p>
+      <p class="font-body text-[10px] uppercase tracking-widest text-fgLight/40 m-0" data-i18n="hero_trust">Abierto todos los días 08:00–01:00 · Metro Urgell</p>
+    </section>
+
     <!-- Footer -->
     <footer class="p-8 md:p-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
       <div>
@@ -1024,7 +1085,7 @@
         <p class="font-body text-xs text-fgLight/40 mb-4 uppercase tracking-wider" data-i18n="footer_tagline">Gastrobar · Bar de Tapas · Eixample Barcelona</p>
         <address class="not-italic font-body text-sm font-light text-fgLight/60 max-w-xs">
           <a href="https://maps.google.com/?q=Corte+de+Manga+Comte+d'Urgell+108+Barcelona" target="_blank" rel="noopener noreferrer" class="hover:text-fgLight transition-colors no-underline">
-            Comte d'Urgell 108<br>Eixample — 08015 Barcelona
+            Comte d'Urgell 108<br>Eixample — 08011 Barcelona
           </a><br>
           <a href="tel:+34623216562" class="hover:text-fgLight transition-colors">+34 623 216 562</a><br>
           <a href="mailto:info@cortedemanga.com" class="hover:text-fgLight transition-colors">info@cortedemanga.com</a>
@@ -1096,12 +1157,12 @@
         header.className = 'accordion-header cursor-pointer p-6 md:p-10 border-b-grid flex justify-between items-center transition-colors hover:bg-fgLight hover:text-bgDark';
         header.innerHTML = `
           <h3 class="font-display text-2xl md:text-5xl uppercase font-bold m-0 pointer-events-none">${categoriaObj.categoria}</h3>
-          <span class="font-body text-3xl font-light pointer-events-none">+</span>
+          <span class="font-body text-3xl font-light pointer-events-none">${index === 0 ? '-' : '+'}</span>
         `;
         
-        // Content (Platos)
+        // Content (Platos) — la primera categoría queda abierta por defecto
         const content = document.createElement('div');
-        content.className = 'accordion-content hidden border-b-grid bg-[#0a0a0a]';
+        content.className = 'accordion-content border-b-grid bg-[#0a0a0a]' + (index === 0 ? '' : ' hidden');
         
         categoriaObj.platos.forEach(plato => {
           const item = document.createElement('div');
@@ -1160,20 +1221,38 @@
     }
   });
 
-  // Tracking centralizado de conversión (Google Ads + evento GA4 con etiqueta del CTA)
+  // Tracking: los clicks en CTAs son micro-eventos GA4; la conversión de Google Ads
+  // solo se dispara con intención real (reserva confirmada en el iframe, WhatsApp o llamada).
   function trackReserva(label) {
     if (typeof gtag === 'function') {
-      gtag('event', 'conversion', {'send_to': 'AW-18213186788/ZVVDCKDA07kcEOTZ3OxD'});
       gtag('event', 'reserva_click', {'cta': label});
     }
   }
+  function trackConversionAds(label) {
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {'send_to': 'AW-18213186788/ZVVDCKDA07kcEOTZ3OxD'});
+      gtag('event', 'reserva_conversion', {'cta': label});
+    }
+  }
+  // Conversión real: la app de reservas emite postMessage({type:'cmReservaConfirmada'})
+  // al confirmar la reserva (ver README del repo Aplicaci-n-reservas).
+  window.addEventListener('message', (e) => {
+    if (e.data?.type === 'cmReservaConfirmada') {
+      trackConversionAds('reserva_confirmada');
+    }
+  });
 
   // Modal de Reservas
+  let modalTrigger = null; // elemento que abrió el modal, para devolverle el foco
   function openReservationModal() {
     preloadReservaIframe(); // garantía: si aún no cargó, carga ahora
     const modal = document.getElementById('reservaModal');
+    modalTrigger = document.activeElement;
     modal.classList.remove('translate-y-full');
     modal.removeAttribute('aria-hidden');
+    modal.removeAttribute('inert');
+    const closeBtn = modal.querySelector('button');
+    if (closeBtn) closeBtn.focus();
     if (typeof lenis !== 'undefined') lenis.stop();
     if (history.replaceState) history.replaceState(null, '', '#reservas');
   }
@@ -1181,9 +1260,14 @@
     const modal = document.getElementById('reservaModal');
     modal.classList.add('translate-y-full');
     modal.setAttribute('aria-hidden', 'true');
+    modal.setAttribute('inert', '');
+    if (modalTrigger && typeof modalTrigger.focus === 'function') modalTrigger.focus();
+    modalTrigger = null;
     if (typeof lenis !== 'undefined') lenis.start();
     if (history.replaceState && location.hash === '#reservas') history.replaceState(null, '', location.pathname);
   }
+  // Estado inicial: el modal cerrado no debe ser enfocable
+  document.getElementById('reservaModal').setAttribute('inert', '');
 
   // Permite abrir el modal de reservas vía URL (#reservas) — enlace directo y desde llms.txt/sitemap
   function checkReservasHash() {
@@ -1261,10 +1345,15 @@
     const isOpen = mobileMenu.classList.toggle('open');
     if (isOpen) {
       mobileMenu.removeAttribute('aria-hidden');
+      mobileMenu.removeAttribute('inert');
+      closeMenuBtn.focus();
     } else {
       mobileMenu.setAttribute('aria-hidden', 'true');
+      mobileMenu.setAttribute('inert', '');
+      openMenuBtn.focus();
     }
   };
+  mobileMenu.setAttribute('inert', '');
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
   closeLinks.forEach(link => link.addEventListener('click', toggleMenu));
@@ -1280,12 +1369,53 @@
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+  // 8. Barra CTA fija inferior (móvil): aparece cuando el hero sale de pantalla.
+  // La barra está definida más abajo en el DOM, así que esperamos a DOMContentLoaded.
+  window.addEventListener('DOMContentLoaded', () => {
+    const ctaBar = document.getElementById('mobileCtaBar');
+    const heroSection = document.getElementById('hero');
+    if (ctaBar && heroSection && 'IntersectionObserver' in window) {
+      const ctaObserver = new IntersectionObserver(([entry]) => {
+        const show = !entry.isIntersecting;
+        ctaBar.classList.toggle('visible', show);
+        document.body.classList.toggle('cta-bar-visible', show);
+        if (show) { ctaBar.removeAttribute('aria-hidden'); }
+        else { ctaBar.setAttribute('aria-hidden', 'true'); }
+      }, { threshold: 0.15 });
+      ctaObserver.observe(heroSection);
+    }
+  });
+
+  // 9. Carga diferida de las slides del hero desktop (solo la 1ª carga eager)
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.hero-slide[data-bg]').forEach(el => {
+      el.style.backgroundImage = "url('" + el.dataset.bg + "')";
+      el.removeAttribute('data-bg');
+    });
+  });
+
+  // 10. Esc cierra modal de reservas y menú móvil
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const modal = document.getElementById('reservaModal');
+    if (modal && !modal.classList.contains('translate-y-full')) { closeReservationModal(); return; }
+    if (mobileMenu.classList.contains('open')) toggleMenu();
+  });
+
   setLanguage(currentLang);
 
 </script>
 
+<!-- Barra CTA fija inferior (solo móvil) -->
+<div class="mobile-cta-bar" id="mobileCtaBar" aria-hidden="true">
+  <button type="button" onclick="trackReserva('barra_movil'); openReservationModal()" class="cta-main" data-i18n="btn_reservar">Reservar Mesa</button>
+  <a href="https://wa.me/34623216562?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa" onclick="trackConversionAds('barra_movil_whatsapp')" target="_blank" rel="noopener noreferrer" aria-label="Reservar por WhatsApp" class="cta-wa">
+    <svg aria-hidden="true" class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  </a>
+</div>
+
 <!-- Language Selector FAB (esquina inferior izquierda, para no solaparse con WhatsApp) -->
-<div class="fixed bottom-6 left-6 md:bottom-10 md:left-10 z-[100] flex flex-col gap-1 text-[10px] uppercase tracking-widest font-body bg-bgDark border border-fgLight px-3 py-2 text-fgLight/50 group hover:border-accent transition-colors">
+<div class="lang-fab fixed bottom-6 left-6 md:bottom-10 md:left-10 z-[100] flex flex-col gap-1 text-[10px] uppercase tracking-widest font-body bg-bgDark border border-fgLight px-3 py-2 text-fgLight/50 group hover:border-accent transition-colors">
   <div class="flex gap-3">
     <button type="button" onclick="setLanguage('es')" aria-label="Español" class="lang-btn hover:text-fgLight transition-colors" data-lang="es">ES</button>
     <span>|</span>
@@ -1296,7 +1426,7 @@
 </div>
 
 <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/34623216562?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa" onclick="trackReserva('whatsapp_fab')" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] bg-bgDark border border-fgLight px-5 py-4 flex items-center gap-3 hover:bg-fgLight hover:text-bgDark transition-colors group cursor-pointer no-underline text-fgLight">
+<a href="https://wa.me/34623216562?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa" onclick="trackConversionAds('whatsapp_fab')" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" class="wa-fab fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] bg-bgDark border border-fgLight px-5 py-4 flex items-center gap-3 hover:bg-fgLight hover:text-bgDark transition-colors group cursor-pointer no-underline text-fgLight">
   <svg aria-hidden="true" class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
   <span class="font-body text-xs uppercase tracking-[0.2em] font-bold">WhatsApp</span>
 </a>

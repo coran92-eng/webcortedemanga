@@ -34,6 +34,9 @@ const DICT = {
     /* Carta */
     carta_title: "La Carta",
     carta_subtitle: "Tapas artesanales y cocina de mercado en el Eixample, Barcelona",
+    carta_cta_texto: "¿Te ha abierto el apetito? Guárdate una mesa antes de que vuelen.",
+    cta_final_titulo: "Reserva<br>tu mesa",
+    cta_final_desc: "Cocina de mercado, tapas artesanales y cócteles de autor en el Eixample. Reserva en menos de un minuto.",
 
     /* Teaser grupos (index) */
     grupos_teaser_label: "Menús de grupo",
@@ -169,6 +172,9 @@ const DICT = {
     /* Menu */
     carta_title: "The Menu",
     carta_subtitle: "Artisan tapas and market cuisine in the Eixample, Barcelona",
+    carta_cta_texto: "Feeling hungry? Save your table before they're gone.",
+    cta_final_titulo: "Book<br>your table",
+    cta_final_desc: "Market cuisine, artisan tapas and signature cocktails in the Eixample. Book in under a minute.",
 
     /* Groups teaser (index) */
     grupos_teaser_label: "Group menus",
@@ -304,6 +310,9 @@ const DICT = {
     /* Carta */
     carta_title: "La Carta",
     carta_subtitle: "Tapes artesanals i cuina de mercat a l'Eixample, Barcelona",
+    carta_cta_texto: "Se t'ha obert la gana? Guarda't una taula abans que volin.",
+    cta_final_titulo: "Reserva<br>la teva taula",
+    cta_final_desc: "Cuina de mercat, tapes artesanals i còctels d'autor a l'Eixample. Reserva en menys d'un minut.",
 
     /* Teaser grups (index) */
     grupos_teaser_label: "Menús de grup",
