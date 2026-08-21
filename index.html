@@ -76,7 +76,18 @@
         "width": 1024,
         "height": 1024
       },
-      "description": "Bar de tapas y gastrobar en el Eixample de Barcelona. Cocina de mercado, tapas artesanales y cócteles de autor. Abierto de lunes a domingo de 08:00 a 01:00.",
+      "description": "Bar de tapas y gastrobar en el Eixample de Barcelona. Cocina de mercado, tapas artesanales y cócteles de autor. Abierto todos los días de 08:00 a 01:00; la cocina sirve de 08:00 a 23:00.",
+      "amenityFeature": [
+        {"@type": "LocationFeatureSpecification", "name": "Terraza", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Accesible en silla de ruedas", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Wifi gratuito", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Admite perros", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Opciones veganas", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Opciones sin gluten", "value": false},
+        {"@type": "LocationFeatureSpecification", "name": "Menú del día", "value": false}
+      ],
+      "publicAccess": true,
+      "isAccessibleForFree": true,
       "url": "https://cortedemanga.es",
       "telephone": "+34623216562",
       "email": "info@cortedemanga.com",
@@ -284,7 +295,7 @@
           "name": "¿Cuál es el horario de Corte de Manga?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Corte de Manga abre todos los días de la semana, de lunes a domingo, de 08:00 a 01:00 horas."
+            "text": "Corte de Manga abre todos los días, de lunes a domingo, de 08:00 a 01:00. La cocina sirve de 08:00 a 23:00; después solo se sirven bebidas y cócteles."
           }
         },
         {
@@ -554,7 +565,7 @@
     .hero-mobile-bg {
       position: absolute;
       inset: 0;
-      background-image: url('img/hero-mobile.webp');
+      background-image: url('/img/hero-mobile.webp');
       background-size: cover;
       background-position: center top;
       display: none;
@@ -654,6 +665,7 @@
     <a href="#carta" class="mobile-menu-link close-on-click" data-i18n="nav_carta">Carta</a>
     <a href="#experiencia" class="mobile-menu-link close-on-click" data-i18n="nav_concepto">Concepto</a>
     <a href="/grupos" class="mobile-menu-link" data-i18n="nav_grupos">Grupos</a>
+    <a href="/preguntas-frecuentes" class="mobile-menu-link" data-i18n="nav_faq">FAQ</a>
     <button type="button" onclick="trackReserva('menu_movil'); openReservationModal()" aria-label="Abrir formulario de reserva" class="mobile-menu-link text-left" data-i18n="nav_reservar">Reservar</button>
   </nav>
 </div>
@@ -705,6 +717,7 @@
       <a href="#carta" class="hover:text-accent transition-colors" data-i18n="nav_carta">Carta</a>
       <a href="#experiencia" class="hover:text-accent transition-colors" data-i18n="nav_concepto">Concepto</a>
       <a href="/grupos" class="hover:text-accent transition-colors" data-i18n="nav_grupos">Grupos</a>
+      <a href="/preguntas-frecuentes" class="hover:text-accent transition-colors" data-i18n="nav_faq">FAQ</a>
       <button type="button" onclick="trackReserva('sidebar'); openReservationModal()" aria-label="Abrir formulario de reserva" class="hover:text-accent transition-colors uppercase tracking-[0.2em]" data-i18n="nav_reservar">Reservar</button>
     </nav>
     <div class="text-[10px] tracking-widest text-grid vertical-text">
@@ -728,12 +741,12 @@
       <!-- Móvil: collage estático 2×2 -->
       <div class="hero-mobile-bg"></div>
       <!-- Desktop: slideshow crossfade -->
-      <div class="hero-slide" style="background-image:url('img/ambiente-terraza.webp');background-position:center 40%;"></div>
-      <div class="hero-slide" data-bg="img/burrata.webp" style="background-position:center 60%;"></div>
-      <div class="hero-slide" data-bg="img/ambiente-interior.webp" style="background-position:center 40%;"></div>
-      <div class="hero-slide" data-bg="img/carrillera.webp"></div>
-      <div class="hero-slide" data-bg="img/ambiente-barra.webp" style="background-position:center 30%;"></div>
-      <div class="hero-slide" data-bg="img/ambiente-mesas.webp" style="background-position:center 35%;"></div>
+      <div class="hero-slide" style="background-image:url('/img/ambiente-terraza.webp');background-position:center 40%;"></div>
+      <div class="hero-slide" data-bg="/img/burrata.webp" style="background-position:center 60%;"></div>
+      <div class="hero-slide" data-bg="/img/ambiente-interior.webp" style="background-position:center 40%;"></div>
+      <div class="hero-slide" data-bg="/img/carrillera.webp"></div>
+      <div class="hero-slide" data-bg="/img/ambiente-barra.webp" style="background-position:center 30%;"></div>
+      <div class="hero-slide" data-bg="/img/ambiente-mesas.webp" style="background-position:center 35%;"></div>
       <div style="position:absolute;inset:0;background:rgba(5,5,5,0.48);"></div>
       <!-- Desktop Fixed Reservar Mesa -->
       <div class="hidden md:block fixed top-10 right-10 z-[100]">
@@ -759,7 +772,7 @@
             Reservar Mesa
           </button>
           <p class="font-body text-xs tracking-wider text-fgLight/80 m-0"><span class="text-accent">★</span> 4,6 · <span data-i18n="hero_rating">+550 reseñas en Google</span></p>
-          <p class="font-body text-[10px] uppercase tracking-widest text-fgLight/50 m-0" data-i18n="hero_trust">Abierto todos los días 08:00–01:00 · Metro Urgell</p>
+          <p class="font-body text-[10px] uppercase tracking-widest text-fgLight/50 m-0" data-i18n="hero_trust">Cocina 08:00–23:00 todos los días · Copas hasta la 01:00 · Metro Urgell</p>
         </div>
       </div>
     </section>
@@ -783,8 +796,8 @@
       
       <div class="relative h-[60vh] md:h-auto overflow-hidden group">
         <picture>
-          <source type="image/webp" sizes="(max-width: 768px) 100vw, 50vw" srcset="img/tiras_pollo-480.webp 480w, img/tiras_pollo-800.webp 800w, img/tiras_pollo.webp 1024w">
-          <img src="img/tiras_pollo.png"
+          <source type="image/webp" sizes="(max-width: 768px) 100vw, 50vw" srcset="/img/tiras_pollo-480.webp 480w, /img/tiras_pollo-800.webp 800w, /img/tiras_pollo.webp 1024w">
+          <img src="/img/tiras_pollo.png"
                class="absolute inset-0 w-full h-full object-cover image-mono"
                alt="Tiras de pollo rebozadas con salsa miel y mostaza - Corte de Manga gastrobar Barcelona"
                width="1024" height="1024" loading="lazy">
@@ -800,8 +813,8 @@
     <section class="grid grid-cols-1 md:grid-cols-3 border-b-grid">
       <div class="h-[400px] border-b-grid md:border-b-0 md:border-r-grid relative overflow-hidden group">
         <picture>
-          <source type="image/webp" sizes="(max-width: 768px) 100vw, 33vw" srcset="img/burrata-480.webp 480w, img/burrata-800.webp 800w, img/burrata.webp 1024w">
-          <img src="img/burrata.png"
+          <source type="image/webp" sizes="(max-width: 768px) 100vw, 33vw" srcset="/img/burrata-480.webp 480w, /img/burrata-800.webp 800w, /img/burrata.webp 1024w">
+          <img src="/img/burrata.png"
                class="absolute inset-0 w-full h-full object-cover image-mono"
                alt="Burrata Secchiello - tapa estrella del gastrobar Corte de Manga en el Eixample de Barcelona"
                width="1024" height="1024" loading="lazy">
@@ -812,8 +825,8 @@
       </div>
       <div class="h-[400px] border-b-grid md:border-b-0 md:border-r-grid relative overflow-hidden group">
         <picture>
-          <source type="image/webp" sizes="(max-width: 768px) 100vw, 33vw" srcset="img/alcachofas-480.webp 480w, img/alcachofas-800.webp 800w, img/alcachofas.webp 1024w">
-          <img src="img/alcachofas.png"
+          <source type="image/webp" sizes="(max-width: 768px) 100vw, 33vw" srcset="/img/alcachofas-480.webp 480w, /img/alcachofas-800.webp 800w, /img/alcachofas.webp 1024w">
+          <img src="/img/alcachofas.png"
                class="absolute inset-0 w-full h-full object-cover image-mono"
                alt="Alcachofas de Tudela confitadas con jamón ibérico y yema - Corte de Manga Barcelona"
                width="1024" height="1024" loading="lazy">
@@ -824,8 +837,8 @@
       </div>
       <div class="h-[400px] relative overflow-hidden group">
         <picture>
-          <source type="image/webp" sizes="(max-width: 768px) 100vw, 33vw" srcset="img/carrillera-480.webp 480w, img/carrillera-800.webp 800w, img/carrillera.webp 1024w">
-          <img src="img/carrillera.png"
+          <source type="image/webp" sizes="(max-width: 768px) 100vw, 33vw" srcset="/img/carrillera-480.webp 480w, /img/carrillera-800.webp 800w, /img/carrillera.webp 1024w">
+          <img src="/img/carrillera.png"
                class="absolute inset-0 w-full h-full object-cover image-mono"
                alt="Carrillera de cerdo guisada al vino tinto con puré cremoso - gastrobar Eixample Barcelona"
                width="1024" height="1024" loading="lazy">
@@ -1009,7 +1022,7 @@
             <span data-i18n="faq2_q">¿Cuál es el horario?</span>
             <span class="font-body text-2xl font-light ml-4 group-open:rotate-45 transition-transform inline-block">+</span>
           </summary>
-          <p class="font-body text-sm text-fgLight/70 mt-3 leading-relaxed" data-i18n="faq2_a">Abrimos <strong>todos los días de la semana, de lunes a domingo, de 08:00 a 01:00</strong>. Puedes venir a desayunar, comer, merendar o cenar. El gastrobar nunca cierra.</p>
+          <p class="font-body text-sm text-fgLight/70 mt-3 leading-relaxed" data-i18n="faq2_a">Abrimos <strong>todos los días, de lunes a domingo, de 08:00 a 01:00</strong>. La <strong>cocina sirve de 08:00 a 23:00</strong>: puedes venir a desayunar, comer, merendar o cenar. Después de las 23:00 seguimos abiertos para copas y cócteles.</p>
         </details>
         <details class="py-5 group">
           <summary class="font-display text-lg md:text-2xl uppercase font-bold cursor-pointer list-none flex justify-between items-center hover:text-accent transition-colors">
@@ -1051,7 +1064,7 @@
         <div class="mt-6 font-body text-xs uppercase tracking-widest text-fgLight/40">
           <p class="mb-1">🚇 Metro: Urgell (L1) · Hospital Clínic (L5)</p>
           <p class="mb-1">🚌 Bus: 9, 27, 54, 56</p>
-          <p data-i18n="como_llegar_horario">🕐 Abierto todos los días: 08:00 – 01:00</p>
+          <p data-i18n="como_llegar_horario">🕐 Cocina todos los días 08:00 – 23:00 · Local hasta la 01:00</p>
         </div>
       </div>
       <div class="h-[300px] md:h-auto">
@@ -1077,7 +1090,7 @@
         <a href="https://wa.me/34623216562?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa" onclick="trackConversionAds('cta_final_whatsapp')" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-fgLight px-10 py-4 font-body text-xs uppercase tracking-widest font-bold text-fgLight no-underline hover:bg-fgLight hover:text-bgDark transition-colors">WhatsApp</a>
       </div>
       <p class="font-body text-xs tracking-wider text-fgLight/60 m-0"><span class="text-accent">★</span> 4,6 · <span data-i18n="hero_rating">+550 reseñas en Google</span></p>
-      <p class="font-body text-[10px] uppercase tracking-widest text-fgLight/40 m-0" data-i18n="hero_trust">Abierto todos los días 08:00–01:00 · Metro Urgell</p>
+      <p class="font-body text-[10px] uppercase tracking-widest text-fgLight/40 m-0" data-i18n="hero_trust">Cocina 08:00–23:00 todos los días · Copas hasta la 01:00 · Metro Urgell</p>
     </section>
 
     <!-- Footer -->
@@ -1094,7 +1107,11 @@
         </address>
       </div>
       <div class="text-left md:text-right font-body text-xs uppercase tracking-widest text-fgLight/40">
-        <p class="mb-2" data-i18n="footer_hours">Lun - Dom / 08:00 - 01:00</p>
+        <p class="mb-4" data-i18n="footer_guias">Guías</p>
+        <p class="mb-1"><a href="/preguntas-frecuentes" class="hover:text-fgLight transition-colors no-underline" data-i18n="footer_faq">Preguntas frecuentes</a></p>
+        <p class="mb-1"><a href="/tapas-eixample-barcelona" class="hover:text-fgLight transition-colors no-underline" data-i18n="footer_guia_tapas">Comer tapas en el Eixample</a></p>
+        <p class="mb-4"><a href="/desayunos-eixample-barcelona" class="hover:text-fgLight transition-colors no-underline" data-i18n="footer_guia_desayunos">Desayunar en el Eixample</a></p>
+        <p class="mb-2" data-i18n="footer_hours">Cocina 08:00 - 23:00 · Local hasta 01:00</p>
         <p data-i18n="footer_rights">© 2026 Todos los derechos reservados.</p>
       </div>
     </footer>
@@ -1104,17 +1121,14 @@
 
 <!-- Datos (carta + traducciones) al final del body: no bloquean el render. La carta ya está
      pre-renderizada en HTML estático arriba; estos scripts solo habilitan el cambio de idioma. -->
-<script src="carta.js"></script>
-<script src="traducciones.js"></script>
+<script src="/carta.js"></script>
+<script src="/traducciones.js"></script>
 <script>
   // 1. Lógica Multi-idioma
-  let currentLang = 'es';
-
-  // Detectar idioma inicial
-  const browserLang = navigator.language.slice(0, 2);
-  if (['es', 'en', 'ca'].includes(browserLang)) {
-    currentLang = browserLang;
-  }
+  // El idioma lo manda la URL (/, /en/, /ca/), no el navegador: cada versión tiene su
+  // propia URL indexable. setLanguage() se sigue usando para renderizar la carta.
+  let currentLang = document.documentElement.lang || 'es';
+  if (!['es', 'en', 'ca'].includes(currentLang)) currentLang = 'es';
 
   function setLanguage(lang) {
     document.documentElement.lang = lang;
@@ -1426,12 +1440,14 @@
 
 <!-- Language Selector FAB (esquina inferior izquierda, para no solaparse con WhatsApp) -->
 <div class="lang-fab fixed bottom-6 left-6 md:bottom-10 md:left-10 z-[100] flex flex-col gap-1 text-[10px] uppercase tracking-widest font-body bg-bgDark border border-fgLight px-3 py-2 text-fgLight/50 group hover:border-accent transition-colors">
+  <!-- Enlaces reales entre versiones: cada idioma tiene su URL indexable.
+       data-lang-switch evita que el generador de idiomas los reescriba. -->
   <div class="flex gap-3">
-    <button type="button" onclick="setLanguage('es')" aria-label="Español" class="lang-btn hover:text-fgLight transition-colors" data-lang="es">ES</button>
+    <a href="/" hreflang="es" data-lang-switch aria-label="Español" class="lang-btn no-underline hover:text-fgLight transition-colors" data-lang="es">ES</a>
     <span>|</span>
-    <button type="button" onclick="setLanguage('en')" aria-label="English" class="lang-btn hover:text-fgLight transition-colors" data-lang="en">EN</button>
+    <a href="/en/" hreflang="en" data-lang-switch aria-label="English" class="lang-btn no-underline hover:text-fgLight transition-colors" data-lang="en">EN</a>
     <span>|</span>
-    <button type="button" onclick="setLanguage('ca')" aria-label="Català" class="lang-btn hover:text-fgLight transition-colors" data-lang="ca">CA</button>
+    <a href="/ca/" hreflang="ca" data-lang-switch aria-label="Català" class="lang-btn no-underline hover:text-fgLight transition-colors" data-lang="ca">CA</a>
   </div>
 </div>
 
