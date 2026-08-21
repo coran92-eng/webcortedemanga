@@ -743,8 +743,10 @@
       </div>
 
       <div class="relative mt-20">
-        <h1 class="font-display font-extrabold text-massive uppercase text-fgLight m-0" data-i18n="hero_title1">
-          Corte<br><span style="margin-top: -0.1em; display: block;" data-i18n="hero_title2">De Manga</span>
+        <!-- Los dos data-i18n deben ser hermanos, nunca anidados: setLanguage() reemplaza
+             el innerHTML de cada elemento y destruiría el hijo. -->
+        <h1 class="font-display font-extrabold text-massive uppercase text-fgLight m-0">
+          <span data-i18n="hero_title1">Corte</span><span style="margin-top: -0.1em; display: block;" data-i18n="hero_title2">De Manga</span>
         </h1>
       </div>
 
