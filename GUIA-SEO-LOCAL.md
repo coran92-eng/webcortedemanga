@@ -28,10 +28,11 @@ Tu ficha de Google es más importante que la web para el pack local. Entra en
 
 ### 1.1 Datos básicos (NAP exacto)
 - [ ] **Nombre**: exactamente "Corte de Manga" (sin añadir keywords tipo "Corte de Manga Bar de Tapas" → va contra las normas y puede suspender la ficha).
-- [ ] **Dirección**: `Carrer del Comte d'Urgell, 108, 08015 Barcelona` — IDÉNTICA a la de la web, letra por letra.
+- [ ] **Dirección**: `Carrer del Comte d'Urgell, 108, 08011 Barcelona` — IDÉNTICA a la de la web, letra por letra.
 - [ ] **Teléfono**: `+34 623 216 562` — mismo formato en todas partes.
 - [ ] **Web**: `https://cortedemanga.es`
-- [ ] **Horario**: Lun-Dom 08:00–01:00. Marca también horarios especiales (festivos) cuando toque.
+- [ ] **Horario**: Lun-Dom 08:00–01:00. Indica en la descripción que **la cocina sirve hasta las 23:00**
+      (evita reseñas negativas de quien llega a medianoche a cenar). Marca también horarios especiales.
 
 ### 1.2 Categorías (clave para la relevancia)
 - [ ] **Categoría principal**: `Bar de tapas` (es la keyword que quieres atacar).

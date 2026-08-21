@@ -1,0 +1,184 @@
+/* ============================================================
+   Corte de Manga — estilos compartidos de páginas de contenido
+   (FAQ y guías). Complementa styles.css (Tailwind compilado).
+   Las clases propias van prefijadas con cdm- para no depender
+   de utilidades de Tailwind que no estén en el build.
+   ============================================================ */
+
+:root { --grid-color: rgba(235, 235, 235, 0.15); }
+
+body {
+  background-color: #050505;
+  color: #EBEBEB;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* ── Layout base (mismo sistema que index.html y grupos.html) ── */
+.blueprint-grid {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr;
+  min-height: 100vh;
+  border-right: 1px solid var(--grid-color);
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .blueprint-grid { grid-template-columns: 1fr; grid-template-rows: 60px auto; }
+}
+.border-b-grid { border-bottom: 1px solid var(--grid-color); }
+.border-r-grid { border-right: 1px solid var(--grid-color); }
+.border-t-grid { border-top: 1px solid var(--grid-color); }
+.vertical-text { writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); }
+/* Más contenido que la home: el titular no debe comerse la pantalla */
+.text-massive { font-size: clamp(2.2rem, 6vw, 4.5rem); line-height: 0.92; letter-spacing: -0.03em; }
+
+.btn-sharp { position: relative; overflow: hidden; transition: color .4s cubic-bezier(.83,0,.17,1); z-index: 1; }
+.btn-sharp::before {
+  content: ''; position: absolute; inset: 0; background: #EBEBEB;
+  transform: scaleY(0); transform-origin: bottom;
+  transition: transform .4s cubic-bezier(.83,0,.17,1); z-index: -1;
+}
+.btn-sharp:hover { color: #050505; }
+.btn-sharp:hover::before { transform: scaleY(1); }
+
+.mobile-menu-overlay {
+  position: fixed; inset: 0; background-color: #050505; z-index: 100;
+  display: flex; flex-direction: column;
+  transform: translateY(-100%); transition: transform .6s cubic-bezier(.83,0,.17,1);
+}
+.mobile-menu-overlay.open { transform: translateY(0); }
+.mobile-menu-link {
+  font-size: clamp(2.2rem, 9vw, 4rem); text-transform: uppercase; font-weight: 800;
+  font-family: 'Syne', sans-serif; padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--grid-color);
+  transition: color .3s, padding-left .3s; text-decoration: none; color: #EBEBEB; display: block;
+}
+.mobile-menu-link:hover, .mobile-menu-link:active { color: #B12A2A; padding-left: 2.5rem; }
+
+::-webkit-scrollbar { width: 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.text-\[10px\] { font-size: 0.75rem; }
+
+/* ── Contenido editorial ── */
+.cdm-wrap { max-width: 46rem; }
+.cdm-lede {
+  font-size: 1.125rem; font-weight: 300; line-height: 1.7;
+  color: rgba(235,235,235,0.75); margin: 0 0 2rem;
+}
+.cdm-prose { font-size: 1rem; font-weight: 300; line-height: 1.75; color: rgba(235,235,235,0.72); }
+.cdm-prose p { margin: 0 0 1.25rem; }
+.cdm-prose strong { color: #EBEBEB; font-weight: 600; }
+.cdm-prose a { color: #EBEBEB; text-decoration: underline; text-underline-offset: 3px; }
+.cdm-prose a:hover { color: #B12A2A; }
+.cdm-prose ul { margin: 0 0 1.5rem; padding: 0; list-style: none; }
+.cdm-prose ul li {
+  position: relative; padding-left: 1.4rem; margin-bottom: .7rem;
+}
+.cdm-prose ul li::before {
+  content: '—'; position: absolute; left: 0; color: #B12A2A;
+}
+
+.cdm-h2 {
+  font-family: 'Syne', sans-serif; font-weight: 700; text-transform: uppercase;
+  font-size: clamp(1.5rem, 4vw, 2.25rem); line-height: 1.05; letter-spacing: -0.01em;
+  margin: 3rem 0 1.25rem;
+}
+.cdm-h3 {
+  font-family: 'Syne', sans-serif; font-weight: 700; text-transform: uppercase;
+  font-size: 1.15rem; margin: 2rem 0 .75rem;
+}
+.cdm-eyebrow {
+  font-size: .75rem; text-transform: uppercase; letter-spacing: .2em;
+  color: rgba(235,235,235,0.45); margin: 0 0 1.25rem;
+}
+
+/* ── Ficha de datos rápidos (muy legible para humanos y para IAs) ── */
+.cdm-facts {
+  border: 1px solid var(--grid-color); background: #0a0a0a;
+  padding: 1.5rem; margin: 2rem 0;
+}
+.cdm-facts dl { margin: 0; display: grid; gap: .75rem; }
+@media (min-width: 640px) { .cdm-facts dl { grid-template-columns: auto 1fr; column-gap: 2rem; } }
+.cdm-facts dt {
+  font-size: .7rem; text-transform: uppercase; letter-spacing: .16em;
+  color: rgba(235,235,235,0.45); white-space: nowrap;
+}
+.cdm-facts dd { margin: 0 0 .5rem; font-size: .95rem; font-weight: 300; color: rgba(235,235,235,0.85); }
+@media (min-width: 640px) { .cdm-facts dd { margin-bottom: 0; } }
+
+/* ── FAQ ── */
+.cdm-faq { border-top: 1px solid #222; }
+.cdm-faq details { border-bottom: 1px solid #222; padding: 1.25rem 0; }
+.cdm-faq summary {
+  font-family: 'Syne', sans-serif; font-weight: 700; text-transform: uppercase;
+  font-size: 1rem; line-height: 1.3; cursor: pointer; list-style: none;
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;
+  transition: color .2s;
+}
+@media (min-width: 768px) { .cdm-faq summary { font-size: 1.2rem; } }
+.cdm-faq summary:hover { color: #B12A2A; }
+.cdm-faq summary::-webkit-details-marker { display: none; }
+.cdm-faq summary::after {
+  content: '+'; font-family: 'Inter', sans-serif; font-weight: 300; font-size: 1.5rem;
+  line-height: 1; flex-shrink: 0; transition: transform .25s;
+}
+.cdm-faq details[open] summary::after { transform: rotate(45deg); }
+.cdm-faq details > div {
+  font-size: .95rem; font-weight: 300; line-height: 1.7;
+  color: rgba(235,235,235,0.7); margin-top: .9rem; max-width: 44rem;
+}
+.cdm-faq details > div p { margin: 0 0 .8rem; }
+.cdm-faq details > div p:last-child { margin-bottom: 0; }
+.cdm-faq details > div a { color: #EBEBEB; text-decoration: underline; text-underline-offset: 3px; }
+.cdm-faq details > div a:hover { color: #B12A2A; }
+.cdm-faq-group { margin-bottom: 3rem; }
+
+/* ── CTA ── */
+.cdm-cta {
+  border: 1px solid var(--grid-color); background: #0a0a0a;
+  padding: 2rem; margin: 3rem 0 0; text-align: center;
+}
+.cdm-btn {
+  display: inline-block; border: 1px solid #EBEBEB; color: #EBEBEB;
+  padding: 1rem 2.25rem; font-size: .75rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .15em; text-decoration: none;
+  background: transparent; cursor: pointer; font-family: 'Inter', sans-serif;
+}
+.cdm-btn--solid { background: #EBEBEB; color: #050505; }
+.cdm-btn-row { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
+
+/* ── Enlaces entre páginas de contenido ── */
+.cdm-related { display: grid; gap: 1px; background: var(--grid-color); margin-top: 3rem; }
+@media (min-width: 768px) { .cdm-related { grid-template-columns: repeat(3, 1fr); } }
+.cdm-related a {
+  background: #050505; padding: 1.5rem; text-decoration: none; color: #EBEBEB;
+  display: block; transition: background .2s;
+}
+.cdm-related a:hover { background: #151515; }
+.cdm-related span {
+  display: block; font-size: .7rem; text-transform: uppercase; letter-spacing: .16em;
+  color: rgba(235,235,235,0.4); margin-bottom: .5rem;
+}
+.cdm-related strong {
+  font-family: 'Syne', sans-serif; font-weight: 700; text-transform: uppercase;
+  font-size: 1rem; line-height: 1.2;
+}
+
+/* ── Migas ── */
+.cdm-breadcrumb { font-size: .75rem; text-transform: uppercase; letter-spacing: .16em; color: rgba(235,235,235,0.4); margin-bottom: 1.5rem; }
+.cdm-breadcrumb a { color: rgba(235,235,235,0.55); text-decoration: none; }
+.cdm-breadcrumb a:hover { color: #EBEBEB; }
+
+/* ── Accesibilidad ── */
+.btn-sharp:focus-visible,
+.cdm-btn:focus-visible,
+.lang-btn:focus-visible { outline: 2px solid rgba(235,235,235,0.55); outline-offset: 2px; }
+.cdm-faq summary:focus-visible { outline: 2px solid rgba(235,235,235,0.55); outline-offset: 4px; }
+.mobile-menu-link:focus-visible { outline: 2px solid rgba(177,42,42,0.8); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-sharp::before { transition: none; }
+  .mobile-menu-overlay { transition: none; }
+}

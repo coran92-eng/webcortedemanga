@@ -1,5 +1,15 @@
 const DICT = {
   es: {
+    nav_faq: "FAQ",
+    footer_guias: "Guías",
+    footer_guia_tapas: "Comer tapas en el Eixample",
+    footer_guia_desayunos: "Desayunar en el Eixample",
+    footer_faq: "Preguntas frecuentes",
+    /* Metaetiquetas por idioma (las usa scripts/build-i18n.mjs) */
+    meta_title_home: "Corte de Manga | Bar de Tapas y Gastrobar en el Eixample, Barcelona",
+    meta_desc_home: "Gastrobar en el Eixample de Barcelona. Cocina de mercado y tapas artesanales, de 08:00 a 23:00 todos los días; copas hasta la 01:00. Comte d'Urgell 108.",
+    meta_title_grupos: "Menús de Grupo | Corte de Manga — Gastrobar Eixample Barcelona",
+    meta_desc_grupos: "Menús de grupo desde 32€ por persona, para 4 a 15 personas, en el Eixample de Barcelona. Entrantes para compartir, segundo y postre a elegir.",
     /* Navegación */
     nav_carta: "Carta",
     nav_concepto: "Concepto",
@@ -14,7 +24,7 @@ const DICT = {
     hero_title2: "De Manga",
     hero_desc: "Cocina de verdad, hecha con las manos y a fuego lento. Recetas de toda la vida, producto de mercado y mucho mimo en cada plato. Aquí vienes a disfrutar.",
     hero_rating: "+550 reseñas en Google",
-    hero_trust: "Abierto todos los días 08:00–01:00 · Metro Urgell",
+    hero_trust: "Cocina 08:00–23:00 todos los días · Copas hasta la 01:00 · Metro Urgell",
     reserva_cargando: "Cargando reservas…",
     reserva_alt_texto: "¿Problemas con el formulario? Reserva directamente:",
     reserva_alt_llamar: "Llamar",
@@ -57,7 +67,7 @@ const DICT = {
     faq1_q: "¿Dónde está Corte de Manga?",
     faq1_a: "Corte de Manga está en el <strong>Carrer del Comte d'Urgell 108, en el Eixample de Barcelona</strong>. Cerca del metro Urgell (L1) y Hospital Clínic (L5). Uno de los gastrobares más valorados del Eixample.",
     faq2_q: "¿Cuál es el horario?",
-    faq2_a: "Abrimos <strong>todos los días de la semana, de lunes a domingo, de 08:00 a 01:00</strong>. Puedes venir a desayunar, comer, merendar o cenar. El gastrobar nunca cierra.",
+    faq2_a: "Abrimos <strong>todos los días, de lunes a domingo, de 08:00 a 01:00</strong>. La <strong>cocina sirve de 08:00 a 23:00</strong>: puedes venir a desayunar, comer, merendar o cenar. Después de las 23:00 seguimos abiertos para copas y cócteles.",
     faq3_q: "¿Se puede reservar mesa?",
     faq3_a: "Sí, <strong>aceptamos reservas</strong>. Puedes hacerlo directamente desde nuestra web pulsando \"Reservar Mesa\", o llamando al <a href=\"tel:+34623216562\" class=\"hover:text-accent transition-colors\">+34 623 216 562</a>. Recomendamos reservar especialmente para cenas de fin de semana.",
     faq4_q: "¿Qué tipo de cocina ofrecéis?",
@@ -68,11 +78,11 @@ const DICT = {
     /* Cómo llegar */
     como_llegar_titulo: "Cómo llegar",
     como_llegar_desc: "Nos encontramos en el corazón del <strong>Eixample de Barcelona</strong>, en el barrio de la <strong>Esquerra de l'Eixample</strong>. Si buscas un <strong>bar de tapas en Barcelona</strong> con cocina de mercado y ambiente de gastrobar, estamos a solo unos minutos andando desde varios puntos del centro.",
-    como_llegar_horario: "🕐 Abierto todos los días: 08:00 – 01:00",
+    como_llegar_horario: "🕐 Cocina todos los días 08:00 – 23:00 · Local hasta la 01:00",
 
     /* Footer */
     footer_tagline: "Gastrobar · Bar de Tapas · Eixample Barcelona",
-    footer_hours: "Lun - Dom / 08:00 - 01:00",
+    footer_hours: "Cocina 08:00 - 23:00 · Local hasta 01:00",
     footer_rights: "© 2026 Todos los derechos reservados.",
 
     /* Página grupos — Hero */
@@ -138,6 +148,16 @@ const DICT = {
   },
 
   en: {
+    nav_faq: "FAQ",
+    footer_guias: "Guides",
+    footer_guia_tapas: "Eating tapas in the Eixample",
+    footer_guia_desayunos: "Breakfast in the Eixample",
+    footer_faq: "Frequently asked questions",
+    /* Per-language meta tags (used by scripts/build-i18n.mjs) */
+    meta_title_home: "Corte de Manga | Tapas Bar and Gastrobar in the Eixample, Barcelona",
+    meta_desc_home: "Tapas gastrobar in Barcelona's Eixample. Market cuisine and handmade tapas, kitchen 08:00 to 23:00 every day; drinks until 01:00. Comte d'Urgell 108.",
+    meta_title_grupos: "Group Menus | Corte de Manga — Gastrobar in the Eixample, Barcelona",
+    meta_desc_grupos: "Set group menus from €32 per person, for 4 to 15 people, in Barcelona's Eixample. Starters to share, a main course and dessert of your choice.",
     /* Navigation */
     nav_carta: "Menu",
     nav_concepto: "Concept",
@@ -152,7 +172,7 @@ const DICT = {
     hero_title2: "De Manga",
     hero_desc: "Real food, made by hand and slow-cooked. Lifelong recipes, fresh market produce, and care in every dish. You come here to enjoy.",
     hero_rating: "+550 Google reviews",
-    hero_trust: "Open every day 08:00–01:00 · Urgell metro",
+    hero_trust: "Kitchen 08:00–23:00 every day · Drinks until 01:00 · Urgell metro",
     reserva_cargando: "Loading reservations…",
     reserva_alt_texto: "Trouble with the form? Book directly:",
     reserva_alt_llamar: "Call",
@@ -195,7 +215,7 @@ const DICT = {
     faq1_q: "Where is Corte de Manga?",
     faq1_a: "Corte de Manga is at <strong>Carrer del Comte d'Urgell 108, in the Eixample neighbourhood of Barcelona</strong>. Close to Urgell metro (L1) and Hospital Clínic (L5). One of the most highly rated gastrobars in the Eixample.",
     faq2_q: "What are the opening hours?",
-    faq2_a: "We are open <strong>every day of the week, Monday to Sunday, from 08:00 to 01:00</strong>. You can come for breakfast, lunch, a snack or dinner. The gastrobar never closes.",
+    faq2_a: "We are open <strong>every day, Monday to Sunday, from 08:00 to 01:00</strong>. The <strong>kitchen serves from 08:00 to 23:00</strong>: breakfast, lunch, a snack or dinner. After 23:00 we stay open for drinks and cocktails.",
     faq3_q: "Can I book a table?",
     faq3_a: "Yes, <strong>we accept reservations</strong>. You can book directly from our website by clicking \"Book a Table\", or by calling <a href=\"tel:+34623216562\" class=\"hover:text-accent transition-colors\">+34 623 216 562</a>. We especially recommend booking for weekend dinners.",
     faq4_q: "What type of food do you serve?",
@@ -206,11 +226,11 @@ const DICT = {
     /* How to get here */
     como_llegar_titulo: "How to get here",
     como_llegar_desc: "We are in the heart of the <strong>Eixample neighbourhood of Barcelona</strong>, in the <strong>Esquerra de l'Eixample</strong> area. If you are looking for a <strong>tapas bar in Barcelona</strong> with market cuisine and a gastrobar atmosphere, we are just a few minutes' walk from several central points.",
-    como_llegar_horario: "🕐 Open every day: 08:00 – 01:00",
+    como_llegar_horario: "🕐 Kitchen every day 08:00 – 23:00 · Bar until 01:00",
 
     /* Footer */
     footer_tagline: "Gastrobar · Tapas Bar · Eixample Barcelona",
-    footer_hours: "Mon - Sun / 08:00 - 01:00",
+    footer_hours: "Kitchen 08:00 - 23:00 · Bar until 01:00",
     footer_rights: "© 2026 All rights reserved.",
 
     /* Groups page — Hero */
@@ -276,6 +296,16 @@ const DICT = {
   },
 
   ca: {
+    nav_faq: "FAQ",
+    footer_guias: "Guies",
+    footer_guia_tapas: "Menjar tapes a l'Eixample",
+    footer_guia_desayunos: "Esmorzar a l'Eixample",
+    footer_faq: "Preguntes freqüents",
+    /* Metaetiquetes per idioma (les fa servir scripts/build-i18n.mjs) */
+    meta_title_home: "Corte de Manga | Bar de Tapes i Gastrobar a l'Eixample, Barcelona",
+    meta_desc_home: "Gastrobar a l'Eixample de Barcelona. Cuina de mercat i tapes artesanals, de 08:00 a 23:00 cada dia; copes fins a la 01:00. Comte d'Urgell 108.",
+    meta_title_grupos: "Menús de Grup | Corte de Manga — Gastrobar Eixample Barcelona",
+    meta_desc_grupos: "Menús de grup des de 32€ per persona, per a 4 a 15 persones, a l'Eixample de Barcelona. Entrants per compartir, segon i postres a triar.",
     /* Navegació */
     nav_carta: "Carta",
     nav_concepto: "Concepte",
@@ -290,7 +320,7 @@ const DICT = {
     hero_title2: "De Manga",
     hero_desc: "Cuina de veritat, feta amb les mans i a foc lent. Receptes de tota la vida, producte de mercat i molt de mim en cada plat. Aquí vens a gaudir.",
     hero_rating: "+550 ressenyes a Google",
-    hero_trust: "Obert tots els dies 08:00–01:00 · Metro Urgell",
+    hero_trust: "Cuina 08:00–23:00 cada dia · Copes fins a la 01:00 · Metro Urgell",
     reserva_cargando: "Carregant reserves…",
     reserva_alt_texto: "Problemes amb el formulari? Reserva directament:",
     reserva_alt_llamar: "Trucar",
@@ -333,7 +363,7 @@ const DICT = {
     faq1_q: "On és Corte de Manga?",
     faq1_a: "Corte de Manga és al <strong>Carrer del Comte d'Urgell 108, a l'Eixample de Barcelona</strong>. A prop del metro Urgell (L1) i Hospital Clínic (L5). Un dels gastrobars més valorats de l'Eixample.",
     faq2_q: "Quin és l'horari?",
-    faq2_a: "Obrim <strong>tots els dies de la setmana, de dilluns a diumenge, de 08:00 a 01:00</strong>. Pots venir a esmorzar, dinar, berenar o sopar. El gastrobar mai tanca.",
+    faq2_a: "Obrim <strong>tots els dies, de dilluns a diumenge, de 08:00 a 01:00</strong>. La <strong>cuina serveix de 08:00 a 23:00</strong>: pots venir a esmorzar, dinar, berenar o sopar. Després de les 23:00 seguim oberts per a copes i còctels.",
     faq3_q: "Es pot reservar taula?",
     faq3_a: "Sí, <strong>acceptem reserves</strong>. Pots fer-ho directament des de la nostra web fent clic a \"Reservar Taula\", o trucant al <a href=\"tel:+34623216562\" class=\"hover:text-accent transition-colors\">+34 623 216 562</a>. Recomanem reservar especialment per als sopars de cap de setmana.",
     faq4_q: "Quin tipus de cuina oferiu?",
@@ -344,11 +374,11 @@ const DICT = {
     /* Com arribar-hi */
     como_llegar_titulo: "Com arribar-hi",
     como_llegar_desc: "Som al cor de l'<strong>Eixample de Barcelona</strong>, al barri de l'<strong>Esquerra de l'Eixample</strong>. Si busques un <strong>bar de tapes a Barcelona</strong> amb cuina de mercat i ambient de gastrobar, som a només uns minuts caminant des de diversos punts del centre.",
-    como_llegar_horario: "🕐 Obert tots els dies: 08:00 – 01:00",
+    como_llegar_horario: "🕐 Cuina cada dia 08:00 – 23:00 · Local fins a la 01:00",
 
     /* Footer */
     footer_tagline: "Gastrobar · Bar de Tapes · Eixample Barcelona",
-    footer_hours: "Dll - Dmg / 08:00 - 01:00",
+    footer_hours: "Cuina 08:00 - 23:00 · Local fins a la 01:00",
     footer_rights: "© 2026 Tots els drets reservats.",
 
     /* Pàgina grups — Hero */
