@@ -26,7 +26,7 @@ LAYOUT laptop: photo band, sign bottom-left, then full-width sections; phone: ph
 :root[data-theme=dark]{--page:#1E3A2B;--page2:#24443A;--fg:#F3ECDF;--soft:#D6CBB5;--acc:#C8955A;--line:#C8955A;--row:rgba(200,149,90,.32);--band:#16301F;--btn:#C8955A;--btnfg:#16301F;--btn2:#F3ECDF;--btn2fg:#16301F;--ghost:#C8955A;--fr-hero:var(--fr-hero-d);--fr-box:var(--fr-box-d);--sign:var(--fr-sign-d);--open:#7FD39A}
 *{box-sizing:border-box;min-width:0}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-bottom:calc(var(--abar) + 16px)}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hbar{transition:none!important}}
 body{margin:0;background:var(--page);color:var(--fg);font:400 1.062rem/1.55 AK,system-ui,-apple-system,"Segoe UI",sans-serif;
 font-variant-numeric:lining-nums;-webkit-tap-highlight-color:rgba(154,101,50,.18);overflow-x:clip;overflow-wrap:break-word}
 h1,h2,h3,p,figure,table,dl,dd{margin:0}
@@ -273,10 +273,12 @@ background:repeating-linear-gradient(90deg,var(--line) 0 9px,transparent 9px 15p
 .gc-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 @media (min-width:900px){
-.hbar{min-height:84px;gap:0 14px}
-.brand .logo{width:98px;height:70px}
-.cut{transform:translateY(-7px)}
-.cut::before{height:1.12px;background:repeating-linear-gradient(90deg,currentColor 0 4.70px,transparent 4.70px 7.81px)}
+html{scroll-padding-top:88px}
+.site{position:sticky;top:0;box-shadow:0 1px 0 rgba(0,0,0,.12)}   /* cabecera fija: «Reserva» siempre a la vista (altura constante: sin saltos al bajar) */
+.hbar{min-height:72px;gap:0 14px}
+.brand .logo{width:84px;height:60px}
+.cut{transform:translateY(-6.45px)}
+.cut::before{height:1.00px;background:repeating-linear-gradient(90deg,currentColor 0 4.03px,transparent 4.03px 6.70px)}
 .mainnav{display:flex;flex:none}
 .mainnav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;font-weight:700;font-size:0.875rem;letter-spacing:.1em;
 text-transform:uppercase;text-decoration:none;color:var(--bandfg)}
