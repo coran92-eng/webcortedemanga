@@ -1,0 +1,5 @@
+# carta.cortedemanga.es (el QR de las mesas): cuando el subdominio apunte a este sitio, lleva a la carta
+https://carta.cortedemanga.es/*  https://cortedemanga.es/carta/:splat  301!
+# Direcciones de la web anterior: siguen funcionando (Google Ads, enlaces guardados)
+/index.html     /         301
+/grupos.html    /grupos/  301
